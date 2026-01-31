@@ -1,0 +1,510 @@
+<!-- Concreta el Pagina a la version actual de HTML -->
+<!DOCTYPE html>
+<!-- Degsina la Pagina al lenguaje Español -->
+<html lang="es">
+
+<head>
+
+    <!-- Permite manejar diferentes Simbolos y Carateres Especiales -->
+    <meta charset="UTF-8">
+    <!-- Permite funcionalidad de la Web en Dispositivos Moviles -->
+    <!-- No tiene mucho importancia porque solo usaremos PC, pero lo ajusta a otros dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Nombra al Sitio Web -->
+    <title>PraevenByte</title>
+    <!-- Permite dar conexion al archivo CSS -->
+    <link rel="stylesheet" href="Style-estadisticas.css">
+    
+</head> 
+
+<body>
+    
+    <!-- La Barra superior con el nombre del proyecto-->
+    <header>
+        <nav class="navbar fijo">
+            <a href="index-inicio.html" class="nombreproyecto">NextGen</a>
+        </nav> 
+    </header>
+
+    <!-- SIDEBAR ORIGINAL -->
+    <aside class="sidebar">
+        <a href="index-estadisticas.html" class="sidebar-item">
+            <span class="icon"><img src="iconsfinal/Porblematica.jpeg" width="30"/></span>
+            <span class="texto">Una Problemática</span>
+        </a>
+        <a href="index-info.html" class="sidebar-item">
+            <span class="icon"><img src="iconsfinal/descubre mas.jpeg" width="30"/></span>
+            <span class="texto">Descubre Más</span>
+        </a>
+        <a href="index-recursos.html" class="sidebar-item">
+            <span class="icon"><img src="iconsfinal/enlaces.jpeg" width="30"/></span>
+            <span class="texto">Enlaces</span>
+        </a>
+    </aside>
+
+    <!-- SECCIÓN: ESTADÍSTICAS IMPACTANTES -->
+    <section id="seccion-estadisticas" class="seccion-estadisticas">
+        <div class="contenedor-estadisticas">
+            
+            <!-- ENCABEZADO IMPACTANTE -->
+            <div class="encabezado-estadisticas">
+                <div class="badge-impacto">Datos Reales</div>
+                <h1 class="titulo-impactante">La Realidad que <span class="resaltado">No Podemos Ignorar</span></h1>
+                <p class="subtitulo-impactante">Cifras que explican por qué la educación sexual es urgente y necesaria</p>
+                <div class="linea-divisoria"></div>
+            </div>
+
+            <!-- CATEGORÍA 1: IMPACTO EN LA MADRE -->
+            <div class="categoria-estadistica categoria-1">
+                <div class="cabecera-categoria">
+                        <img src="svg/female.svg" class="icon-logo">
+                    <div class="texto-categoria">
+                        <h2><span class="numero-categoria">01</span> Impacto en la Madre Adolescente</h2>
+                        <p>Consecuencias físicas, psicológicas y sociales</p>
+                    </div>
+                </div>
+                
+                <div class="grid-estadisticas">
+                    <!-- Estadística 1 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-circular" data-porcentaje="2">
+                                <div class="porcentaje">2da</div>
+                                <div class="etiqueta-grafico">Causa</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Mortalidad Materna</h3>
+                            <p>Segunda causa principal de muerte en adolescentes de 15 a 19 años a nivel mundial.</p>
+                            <div class="fuente">Fuente: OMS, 2023</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 2 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contenedor-grafico">
+                            <div class="contador-animado" data-valor="3900000">
+                                <span class="prefijo">+</span>
+                                <span class="valor">3.9M</span>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Abortos Inseguros</h3>
+                            <p>Cada año, 3.9 millones de adolescentes recurren a abortos en condiciones peligrosas.</p>
+                            <div class="fuente">Fuente: Guttmacher Institute</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 3 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-barra">
+                                <div class="barra-progreso" data-porcentaje="60"></div>
+                                <div class="valor-barra">60%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Deserción Escolar</h3>
+                            <p>6 de cada 10 adolescentes embarazadas abandonan sus estudios de forma permanente.</p>
+                            <div class="fuente">Fuente: UNESCO</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 4 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-radial">
+                                <svg width="100" height="100">
+                                    <circle cx="50" cy="50" r="40"></circle>
+                                    <circle cx="50" cy="50" r="40" class="progreso"></circle>
+                                </svg>
+                                <div class="valor-radial">80%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Pobreza Crónica</h3>
+                            <p>80% mayor probabilidad de vivir en pobreza intergeneracional.</p>
+                            <div class="fuente">Fuente: Banco Mundial</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagen-categoria">
+                    <img src="Webp/estadisticas/mujerembarazadatriste.jpg">
+                    <div class="leyenda-imagen">Consecuencias a largo plazo para la salud y desarrollo</div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA 2: CONSECUENCIAS PARA LOS BEBÉS -->
+            <div class="categoria-estadistica categoria-2">
+                <div class="cabecera-categoria">
+                        <img src="svg/baby.svg" class="icon-logo">
+                    <div class="texto-categoria">
+                        <h2><span class="numero-categoria">02</span> Consecuencias para los Bebés</h2>
+                        <p>Riesgos y vulnerabilidades desde el nacimiento</p>
+                    </div>
+                </div>
+                
+                <div class="grid-estadisticas">
+                    <!-- Estadística 1 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-circular" data-porcentaje="40">
+                                <div class="porcentaje">40%</div>
+                                <div class="etiqueta-grafico">+ común</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Bajo Peso al Nacer</h3>
+                            <p>40% más común en hijos de madres adolescentes.</p>
+                            <div class="fuente">Fuente: OMS</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 2 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contenedor-grafico">
+                            <div class="comparativa-doble">
+                                <div class="grupo-comparacion">
+                                    <div class="valor-alto">50%</div>
+                                    <div class="etiqueta-comparacion">Mayor riesgo</div>
+                                </div>
+                                <div class="vs">VS</div>
+                                <div class="grupo-comparacion">
+                                    <div class="valor-normal">Normal</div>
+                                    <div class="etiqueta-comparacion">Mortalidad</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Mortalidad Infantil</h3>
+                            <p>50% mayor riesgo de muerte en los primeros 28 días de vida.</p>
+                            <div class="fuente">Fuente: UNICEF</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 3 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-pastel">
+                                <div class="rebanada principal" data-porcentaje="25"></div>
+                                <div class="rebanada secundaria" data-porcentaje="75"></div>
+                                <div class="centro-pastel">25%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Orfandad Paterna</h3>
+                            <p>1 de cada 4 bebés de madres adolescentes queda sin padre reconocido.</p>
+                            <div class="fuente">Fuente: Estudios Regionales</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 4 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contenedor-grafico">
+                            <div class="icono-riesgo">
+                                <i class="fas fa-heartbeat"></i>
+                                <div class="indicador-riesgo">30%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Desnutrición Infantil</h3>
+                            <p>30% mayor incidencia de desnutrición en primeros años de vida.</p>
+                            <div class="fuente">Fuente: FAO</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagen-categoria">
+                    <img src="Webp/estadisticas/bebe-riesgo.webp">
+                    <div class="leyenda-imagen">Vulnerabilidades desde los primeros días de vida</div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA 3: IMPACTO SOCIAL -->
+            <div class="categoria-estadistica categoria-3">
+                <div class="cabecera-categoria">
+                    <img src="svg/comunidad.svg" class="icon-logo">
+                    <div class="texto-categoria">
+                        <h2><span class="numero-categoria">03</span> Impacto Social</h2>
+                        <p>Consecuencias que afectan a toda la comunidad</p>
+                    </div>
+                </div>
+                
+                <div class="grid-estadisticas">
+                    <!-- Estadística 1 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up">
+                        <div class="contenedor-grafico">
+                            <div class="contador-grande" data-valor="12000000">
+                                <span class="prefijo">12</span>
+                                <span class="millones">Millones</span>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Matrimonio Infantil</h3>
+                            <p>12 millones de niñas son casadas antes de cumplir 18 años cada año.</p>
+                            <div class="fuente">Fuente: UNICEF</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 2 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-triple">
+                                <div class="barra-triple alta"></div>
+                                <div class="barra-triple media"></div>
+                                <div class="barra-triple baja"></div>
+                                <div class="etiqueta-triple">3x</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Violencia de Género</h3>
+                            <p>3 veces más probable en relaciones con desbalance de poder y edad.</p>
+                            <div class="fuente">Fuente: ONU Mujeres</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 3 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contenedor-grafico">
+                            <div class="mitad-grafico">
+                                <div class="mitad-color"></div>
+                                <div class="valor-mitad">50%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Infecciones de ETS</h3>
+                            <p>Los adolescentes representan el 50% de las nuevas infecciones de VIH.</p>
+                            <div class="fuente">Fuente: UNAIDS</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 4 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contenedor-grafico">    
+                            <div class="ciclo-repetitivo">
+                                <div class="ciclo-icono">⟳</div>
+                                <div class="ciclo-porcentaje">25%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Embarazos Repetidos</h3>
+                            <p>25% tiene un segundo embarazo antes de cumplir 19 años.</p>
+                            <div class="fuente">Fuente: Estudios Longitudinales</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagen-categoria">
+                    <img src="Webp/estadisticas/impacto-social.webp" >
+                    <div class="leyenda-imagen">Efectos en cadena que afectan a comunidades enteras</div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA 4: SITUACIÓN REGIONAL -->
+            <div class="categoria-estadistica categoria-4">
+                <div class="cabecera-categoria">
+                            <img src="svg/mundo.svg" class="icon-logo">
+                    <div class="texto-categoria">
+                        <h2><span class="numero-categoria">04</span> Situación Regional</h2>
+                        <p>Estadísticas específicas de América Latina</p>
+                    </div>
+                </div>
+                
+                <div class="grid-estadisticas">
+                    <!-- Estadística 1 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up">
+                        <div class="contenedor-grafico">
+                            <div class="posicion-ranking">
+                                <div class="numero-ranking">#2</div>
+                                <div class="texto-ranking">en el mundo</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Ranking Mundial</h3>
+                            <p>América Latina tiene la 2da tasa más alta de embarazo adolescente a nivel global.</p>
+                            <div class="fuente">Fuente: CEPAL</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 2 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-paleta">
+                                <div class="color-paleta rojo"></div>
+                                <div class="color-paleta gris"></div>
+                                <div class="valor-paleta">1 de 5</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Tasa Específica</h3>
+                            <p>1 de cada 5 partos en la región es de una madre adolescente.</p>
+                            <div class="fuente">Fuente: OPS</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 3 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-circular" data-porcentaje="34">
+                                <div class="porcentaje">34%</div>
+                                <div class="etiqueta-grafico">recibe</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Falta de Educación</h3>
+                            <p>Solo el 34% recibe educación sexual integral y completa en escuelas.</p>
+                            <div class="fuente">Fuente: UNESCO Regional</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 4 -->
+                    <div class="tarjeta-estadistica" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contenedor-grafico">
+                            <div class="acceso-negado">
+                                <i class="fas fa-ban"></i>
+                                <div class="porcentaje-negado">40%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Acceso Limitado</h3>
+                            <p>40% de adolescentes no tiene acceso a métodos anticonceptivos modernos.</p>
+                            <div class="fuente">Fuente: OMS Américas</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="imagen-categoria">
+                    <img src="Webp/estadisticas/mapa-regional.webp" >
+                    <div class="leyenda-imagen">América Latina: Una de las regiones más afectadas</div>
+                </div>
+            </div>
+
+            <!-- CATEGORÍA 5: EDUCACIÓN COMO SOLUCIÓN -->
+            <div class="categoria-estadistica categoria-5">
+                <div class="cabecera-categoria">
+                        <img src="svg/aprender.svg" class="icon-logo">
+                    <div class="texto-categoria">
+                        <h2><span class="numero-categoria">05</span> Educación Sexual como Solución</h2>
+                        <p>El poder transformador de la información</p>
+                    </div>
+                </div>
+                
+                <div class="grid-estadisticas">
+                    <!-- Estadística 1 -->
+                    <div class="tarjeta-estadistica positiva" data-aos="fade-up">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-impacto">
+                                <div class="flecha-impacto">↓</div>
+                                <div class="valor-impacto">50%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Reducción de Embarazos</h3>
+                            <p>Con educación sexual integral se reducen los embarazos adolescentes en 50%.</p>
+                            <div class="fuente">Fuente: Estudios Comparativos</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 2 -->
+                    <div class="tarjeta-estadistica positiva" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contenedor-grafico">
+                            <div class="grafico-crecimiento">
+                                <div class="linea-crecimiento"></div>
+                                <div class="punto-crecimiento">70%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Decisiones Informadas</h3>
+                            <p>+70% de adolescentes toma decisiones responsables sobre su salud sexual.</p>
+                            <div class="fuente">Fuente: Investigación Educativa</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 3 -->
+                    <div class="tarjeta-estadistica positiva" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contenedor-grafico">
+                            <div class="escudo-proteccion">
+                                <i class="fas fa-shield-alt"></i>
+                                <div class="porcentaje-proteccion">60%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Prevención de ETS</h3>
+                            <p>60% menos infecciones de transmisión sexual con educación adecuada.</p>
+                            <div class="fuente">Fuente: CDC</div>
+                        </div>
+                    </div>
+
+                    <!-- Estadística 4 -->
+                    <div class="tarjeta-estadistica positiva" data-aos="fade-up" data-aos-delay="300">
+                        <div class="contenedor-grafico">
+                            <div class="meta-alcanzada">
+                                <div class="check-meta">✓</div>
+                                <div class="valor-meta">85%</div>
+                            </div>
+                        </div>
+                        <div class="info-estadistica">
+                            <h3>Proyectos Completados</h3>
+                            <p>85% de adolescentes con educación sexual termina sus estudios superiores.</p>
+                            <div class="fuente">Fuente: Estudios Longitudinales</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="imagen-categoria">
+                    <img src="Webp/estadisticas/educacion-solucion.webp" >
+                    <div class="leyenda-imagen">El conocimiento como herramienta de transformación</div>
+                </div>
+            </div>
+
+            <!-- CONCLUSIÓN -->
+            <div class="conclusion-heroica" data-aos="fade-up">
+                <div class="contenedor-conclusion">
+                    <div class="marca-agua">PRAEVENBYTE</div>
+                    <h2 class="titulo-conclusion">Por Esto Creamos <span class="resaltado">NextGen</span></h2>
+                    <p class="texto-conclusion">
+                        Estas cifras no son solo números. Son vidas interrumpidas, sueños pospuestos y potencial desperdiciado. 
+                        Cada estadística representa una adolescente, un bebé, una familia afectada por la desinformación.
+                    </p>
+                    <p class="texto-conclusion">
+                        <strong>NextGen nace como respuesta</strong> a esta realidad. Somos el puente entre la información 
+                        confiable y quienes más la necesitan. Creemos que el conocimiento salva vidas, construye futuros 
+                        y transforma sociedades.
+                    </p>
+                    <div class="valores-mision">
+                            <h4>Nuestro Objetivo</h4>
+                            <p>Reducir estas cifras a través de educación accesible y veraz</p>
+                        </div>
+                        <div class="valor-item">
+                            <h4>Nuestra Visión</h4>
+                            <p>Un mundo donde cada adolescente tome decisiones informadas</p>
+                        </div>
+                        <div class="valor-item">
+                            <h4>Nuestro Compromiso</h4>
+                            <p>Información científica, sin tabúes, para todos los jóvenes</p>
+                        </div>
+                    </div>
+                    <div class="llamado-accion">
+                        <p class="frase-impactante">La información salva vidas. La educación construye futuros.</p>
+                        <a href="index-info.html" class="boton-mision">
+                            <span>Descubre Nuestra Solución</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Conexion con archivo JS-->
+    <script src="script-estadisticas.js"></script>
+
+        <!-- Se designa el Pie de Pagina-->
+    <footer class="footer">
+        <p>© 2025-2026 PRAEVENBYTE · Prevención y Educación para decisiones responsables - Proyecto Educativo</p>
+    </footer>
+
+</body>
+
+</html>

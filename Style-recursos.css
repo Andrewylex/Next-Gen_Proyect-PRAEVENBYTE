@@ -1,0 +1,814 @@
+/*--- Aqui se degsina un scroll suave ---*/
+html {
+scroll-behavior: smooth;
+}
+
+/* Variables CSS para la nueva navbar y sidebar */
+:root {
+    --primary-purple: #8a2be2;
+    --primary-pink: #ff416c;
+    --accent-color: #36d1dc;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-primary: #FFFFFF;
+    --gradient-primary: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+}
+
+/* ========================================= */
+/* NAVBAR MODERNO (REEMPLAZADO) */
+/* ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(10, 14, 23, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nombreproyecto {
+    font-family: 'Cronde', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0 20px;
+}
+
+.nombreproyecto::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-pink), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nombreproyecto:hover {
+    text-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
+    transform: scale(1.02);
+}
+
+.nombreproyecto:hover::after {
+    opacity: 1;
+}
+
+/* ========================================= */
+/* SIDEBAR FLOTANTE MODERNA (REEMPLAZADO) */
+/* ========================================= */
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    height: calc(100vh - 140px);
+    width: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    z-index: 999;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.sidebar:hover {
+    width: 290px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 
+        0 12px 48px rgba(138, 43, 226, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.sidebar-item {
+    width: 85%;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.1), 
+        transparent);
+    transition: left 0.6s ease;
+}
+
+.sidebar-item:hover::before {
+    left: 100%;
+}
+
+.sidebar-item:hover {
+    background: rgba(138, 43, 226, 0.15);
+    transform: translateX(8px);
+}
+
+.sidebar-item .icon {
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(138, 43, 226, 0.2);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-item:hover .icon {
+    background: var(--gradient-primary);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.texto {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+    opacity: 0;
+    color: #000000;
+    transition: opacity 0.3s ease 0.1s;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar:hover .texto {
+    opacity: 1;
+}
+
+
+/*-----------------------------------------------------*/
+/*---- AÑADE FUENTES PERSONALIZADAS A LA PAGINA  -----*/
+/*---------------------------------------------------*/
+/*--- Permite agregar la fuente personalizada "Cronde" ---*/
+@font-face {
+    font-family: 'Cronde';
+    src: url('./font/CRONDE.otf') format('opentype');
+    font-weight: bolder;
+    font-style: normal;
+}
+/*--- Permite agregar la fuente personalizada "Poppins" ---*/
+@font-face {
+    font-family: 'Poppins';
+    src: url('./font/Poppinsbold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+/*--- Permite agregar la fuente personalizada "Montserrat" ---*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./font/Montserrat-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal; 
+}
+
+
+/* ============================================
+   PRAEVENSOFT - CSS PROFESIONAL PARA FLIP CARDS
+   Efecto flip limpio y elegante
+   ============================================ */
+
+/* 1. VARIABLES DE COLOR MODERNAS */
+:root {
+    /* PALETA PROFESIONAL */
+    --primary-color: #6C63FF;     /* Morado profesional */
+    --secondary-color: #4A44C6;   /* Morado oscuro */
+    --accent-color: #FF6584;      /* Rosa para destacar */
+    --light-color: #F8F9FF;       /* Fondo claro */
+    --text-dark: #2D2B55;         /* Texto oscuro */
+    --text-light: #6C6B8A;        /* Texto secundario */
+    --white: #FFFFFF;
+    --shadow: rgba(108, 99, 255, 0.15);
+    
+    /* GRADIENTES */
+    --gradient-primary: linear-gradient(135deg, #b7a1c8, #953fe6);
+    --gradient-accent: linear-gradient(135deg, #FF6584, #FF3366);
+    --gradient-light: linear-gradient(135deg, #F8F9FF, #FFFFFF);
+}
+
+/* 2. RESET Y CONFIGURACIÓN BASE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins';
+    color: var(--text-dark);
+    line-height: 1.6;
+    padding: 120px 120px 100px 230px !important;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #deb6ed 30%, #ed9fe7 60%, #d9cadc 100%);
+    background-attachment: fixed;
+}
+
+/* 3. ENCABEZADO PRINCIPAL */
+.main-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo-wrapper {
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 3px solid var(--primary-color);
+    background-color: var(--white);
+    box-shadow: 0 8px 25px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.site-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.site-subtitle {
+    color: var(--text-light);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* 4. SECCIONES */
+.content-section {
+    margin-bottom: 70px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.section-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.section-header h2 i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 5. CONTENEDORES DE CARDS */
+/* Para 1 card centrada (Proyecto) */
+.single-card-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-width: 400px;   /* controla el ancho */
+    margin: 0 auto;     /* centra el contenedor */
+    margin-bottom: -20px;
+}
+
+/* Para 8 cards en grid (Ayuda) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin: 0 auto;
+}
+
+/* Para 3 cards del Instituto */
+.instituto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 0px;
+
+}
+.instituto-row {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    max-width: 400px;   /* controla el ancho */
+    margin: 0 auto;     /* centra el contenedor */
+}
+.instituto-row.single {
+    justify-content: center;
+    margin-bottom: -16px; 
+}
+
+.instituto-row.double {
+    max-width: 600px;
+        margin-bottom: 80px; 
+
+}
+
+/* 6. ESTILOS DE CARD CON FLIP PERFECTO */
+.card {
+    width: 100%;
+    height: 300px;
+    perspective: 1500px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-style: preserve-3d;
+    border-radius: 16px;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* FRENTE DE LA CARD - Minimalista y limpio */
+.card-front {
+    background: #ffffff;
+    border: 3px solid #e8ebff; /* Borde color del fondo */
+    box-shadow: 
+        0 15px 35px rgba(108, 99, 255, 0.2),
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-front:hover {
+    border-color: rgba(108, 99, 255, 0.2);
+    box-shadow: 0 12px 40px rgba(108, 99, 255, 0.12);
+}
+
+/* Iconos y logos */
+.card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    background: rgba(108, 99, 255, 0.08);
+    border: 2px solid rgba(108, 99, 255, 0.15);
+}
+
+.card-logo {
+    max-height: 900px;
+    max-width: 120px;
+    margin-bottom: -5px;
+    object-fit: contain;
+    padding: 10px;
+    background: rgba(255, 252, 252, 0.9);
+    border-radius: 8px;
+}
+
+/* Textos del frente */
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.card-subtitle {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.card-hint {
+    position: absolute;
+    bottom: 20px;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 15px;
+    background: rgba(108, 99, 255, 0.08);
+    border-radius: 20px;
+}
+
+/* REVERSO DE LA CARD - Colorido y con información */
+.card-back {
+    background: var(--gradient-primary);
+    color: var(--white);
+    transform: rotateY(180deg);
+    text-align: center;
+    justify-content: space-between;
+    padding: 25px;
+    position: relative;
+}
+
+.card-back::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.card-back > * {
+    position: relative;
+    z-index: 2;
+}
+
+.card-back h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* 7. BOTONES DENTRO DE LAS CARDS */
+.card-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--white);
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.card-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+/* Botones especiales para el instituto */
+.insta-btn:hover {
+    background: linear-gradient(90deg, #833AB4, #E1306C);
+    color: white;
+}
+
+.fb-btn:hover {
+    background: linear-gradient(90deg, #1877F2, #0d8af0);
+    color: white;
+}
+
+.web-btn:hover {
+    background: linear-gradient(90deg, #36D1DC, #5B86E5);
+    color: white;
+}
+
+/* 8. FOOTER */
+.main-footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 80px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+/* 9. ANIMACIONES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-section {
+    animation: fadeIn 0.6s ease-out;
+}
+
+    /*------------------------*/
+    /*------- FOOTER  -------*/
+    /*----------------------*/
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+
+        background-color: #000000;
+        color: #FFFFFF;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 14px;
+        z-index: 999;
+        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.7);
+    }
+
+
+/* ============================================
+   AJUSTES PARA CENTRAR CONTENIDO RESPETANDO SIDEBAR
+   ============================================ */
+
+
+/* Contenedor principal para centrar todo */
+.main-container {
+    max-width: 1400px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centra horizontalmente */
+    padding: 0 20px; /* Padding lateral para móviles */
+}
+
+/* Ajustes para las secciones de contenido */
+.content-section {
+    margin-bottom: 70px;
+    text-align: center; /* Centra el texto de los headers */
+}
+
+/* Centrar los headers de sección */
+.section-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
+
+/* Ajustar contenedores de cards para que estén centrados */
+.single-card-container,
+.cards-grid,
+.instituto-container {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+/* Ajuste específico para la grid de 4 columnas */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Centrar filas del instituto */
+.instituto-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+/* Ajuste para el contenedor del instituto */
+.instituto-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Ajustar el encabezado principal */
+.main-header {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+    /*------------------------*/
+    /*------- FOOTER  -------*/
+    /*----------------------*/
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+
+        background-color: #000000;
+        color: #FFFFFF;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 14px;
+        z-index: 999;
+        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.7);
+    }   
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Para pantallas más pequeñas */
+@media (max-width: 1400px) {
+    body {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+    }
+    
+    .footer {
+        left: 100px;
+        right: 100px;
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px;
+    }
+    
+    .footer {
+        left: 80px;
+        right: 80px;
+        width: calc(100% - 160px);
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-left: 100px; /* Mantiene espacio para sidebar */
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+    
+    .instituto-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer {
+        left: 100px;
+        right: 20px;
+        width: calc(100% - 120px);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 100px; /* Más espacio para navbar en móvil */
+    }
+    
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar:hover {
+        transform: translateX(0);
+    }
+    
+    .footer {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+/* Asegurar que todo el contenido esté dentro del contenedor principal */
+.main-header,
+.content-section,
+.main-footer {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,2022 @@
+/*--- Aqui se degsina un scroll suave ---*/
+    html {
+    scroll-behavior: smooth;
+    }
+
+
+    /*-----------------------------------------------------*/
+    /*---- AÑADE FUENTES PERSONALIZADAS A LA PAGINA  -----*/
+    /*---------------------------------------------------*/
+    /*--- Permite agregar la fuente personalizada "Cronde" ---*/
+    @font-face {
+        font-family: 'Cronde';
+        src: url('./font/CRONDE.otf') format('opentype');
+        font-weight: bolder;
+        font-style: normal;
+    }
+    /*--- Permite agregar la fuente personalizada "Poppings" ---*/
+    @font-face {
+        font-family: 'Poppins';
+        src: url('./font/Poppinsbold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+    /*--- Permite agregar la fuente personalizada "Montserrat" ---*/
+    @font-face {
+        font-family: 'Montserrat';
+        src: url('./font/Montserrat-Bold.otf') format('opentype');
+        font-weight: bold;
+        font-style: normal; 
+    }
+
+    /* Variables CSS para colores y efectos */
+    :root {
+        --primary-purple: #8a2be2;
+        --primary-pink: #ff416c;
+        --accent-color: #36d1dc;
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --text-primary: #FFFFFF;
+        --gradient-primary: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+    }
+
+    /* ========================================= */
+    /* NAVBAR MODERNO */
+    /* ========================================= */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 18px 0;
+        background: rgba(10, 14, 23, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nombreproyecto {
+        font-family: 'Cronde', sans-serif;
+        font-size: 2.8rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink), var(--accent-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-decoration: none;
+        letter-spacing: 1px;
+        text-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+        transition: all 0.3s ease;
+        position: relative;
+        padding: 0 20px;
+    }
+
+    .nombreproyecto::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 20px;
+        right: 20px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--primary-pink), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nombreproyecto:hover {
+        text-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
+        transform: scale(1.02);
+    }
+
+    .nombreproyecto:hover::after {
+        opacity: 1;
+    }
+
+    /* ========================================= */
+    /* SIDEBAR FLOTANTE MODERNA */
+    /* ========================================= */
+    .sidebar {
+        position: fixed;
+        top: 80px;
+        left: 0px;
+        height: calc(100vh - 140px);
+        width: 84px;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border-radius: 24px;
+        padding: 25px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        border: 1px solid var(--glass-border);
+        box-shadow: 
+            0 8px 32px rgba(0, 0, 0, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        z-index: 999;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow: hidden;
+    }
+
+    .sidebar:hover {
+        width: 290px;
+        background: rgba(138, 43, 226, 0.2);
+        box-shadow: 
+            0 12px 48px rgba(138, 43, 226, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    .sidebar-item {
+        width: 85%;
+        padding: 23px 0 0 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        border-radius: 16px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .sidebar-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+            transparent, 
+            rgba(126, 66, 182, 0.699), 
+            transparent);
+        transition: left 0.6s ease;
+    }
+
+    .sidebar-item:hover::before {
+        left: 100%;
+    }
+
+    .sidebar-item:hover {
+        background: rgba(138, 43, 226, 0.15);
+        transform: translateX(8px);
+    }
+
+    .sidebar-item .icon {
+        min-width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(138, 43, 226, 0.2);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .sidebar-item:hover .icon {
+        background: var(--gradient-primary);
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .texto {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--text-primary);
+        white-space: nowrap;
+        color: #000000;
+        opacity: 0;
+        transition: opacity 0.3s ease 0.1s;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .sidebar:hover .texto {
+        opacity: 1;
+    }
+
+    /*--------------------------------*/
+    /*- PANEL CON CARRUSEL DE DATOS -*/
+    /*------------------------------*/
+    /*--- Contenedor principal del panel ---*/
+    .panel-educativo {
+        background: linear-gradient(135deg, #8a2be2, #9d4edd);
+        color: white;
+        padding: 15px 0;
+        margin-left: 80px;
+        position: sticky;
+        top: 78px;
+        z-index: 998;
+        box-shadow: 0 4px 20px rgba(138, 43, 226, 0.3);
+        animation: aparecerSuave 0.8s ease;
+    }
+    /*--- Contenedor interno para centrar contenido ---*/
+    .contenedor-panel {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    /*--- Encabezado del panel ---*/
+    .encabezado-panel {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    /*--- Contenedor del carrusel de datos ---*/
+    .carrusel-datos {
+        flex-grow: 1;
+        position: relative;
+        height: 70px;
+        overflow: hidden;
+        min-width: 600px;
+    }
+    /*--- Perzonalizacion de los Datos del Carrusel ---*/
+    .dato-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        opacity: 0;
+        transform: translateX(30px);
+        transition: all 0.6s ease;
+        pointer-events: none;
+    }
+    /*--- Dato Visible por Defecto ---*/
+    .dato-item.activo {
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: all;
+    }
+    /*--- Modificacion del Dato Numerico o del Porcetanje ---*/
+    .numero-dato {
+        font-family: 'Montserrat';
+        font-size: 2.5rem;
+        font-weight: 700;
+        background: rgba(255, 255, 255, 0.15);
+        padding: 8px 20px;
+        border-radius: 12px;
+        min-width: 120px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        flex-shrink: 0;
+    }
+    /*--- Texto descriptivo del dato ---*/
+    .texto-dato {
+        font-family: 'Poppins';
+        font-size: 20px;
+        line-height: 1.4;
+        flex-grow: 1;
+    }
+    /*--- Controles del carrusel (botones e indicadores) ---*/
+    .controles-carrusel {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-shrink: 0;
+    }
+    /*--- Botones del Panel ---*/
+    .btn-control {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        flex-shrink: 0;
+    }
+    /*--- Animacion de los Botones al dar clic ---*/
+    .btn-control:active {
+        transform: scale(0.50);
+    }
+    /*--- Ajustes de indicadores  ---*/
+    .indicadores {
+        display: flex;
+        gap: 10px;
+    }
+    /*--- Ajustes individual de cada indicador de manera grupal ---*/
+    .indicador {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+    /*--- Indicador activo ---*/
+    .indicador.activo {
+        background: #17e0e3;
+        transform: scale(2);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+
+    /*----------------------------------------*/
+    /*--- SECCIÓN INICIAL DE INTRODUCCION ---*/
+    /*--------------------------------------*/
+    /*--- Contenedor principal de la sección inicial ---*/
+    .seccion-inicial {
+        min-height: 85vh;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        padding: 0px 20px 40px 20px; /* Espacio para navbar fija */
+        margin-left: 80px; /* Respeta la sidebar */
+        background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #f0eaff 100%);
+    }
+    /*--- Personalizacion del Fondo SVG Animado ---*/
+    .fondo-svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.1; /* Estar en transparencia para no interferir con el contenido */
+    }
+    .fondo-svg svg {
+        width: 300%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /*--- Contenedor del contenido puesto encima del Svg ---*/
+    .contenedor-inicial {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        z-index: 1; /* Asegura que el contenido esté encima del SVG */
+    }
+    /*--- Contenedor de dos columnas para la informacion---*/
+    .contenedor-columnas {
+        display: flex;
+        gap:35px;
+        align-items: center;
+    }
+    /*--- Columna de la imagen (izquierda) ---*/
+    .columna-imagen {
+        flex: 1;
+    }
+    .marco-imagen {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(139, 19, 195, 0.3); /* Color morado del SVG */
+        transition: transform 0.3s ease;
+        background: white; 
+        padding: 10px;
+    }
+    .marco-imagen:hover {
+        transform: translateY(-10px) scale(1.02);
+    }
+    .imagen-principal {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+    .marco-imagen:hover .imagen-principal {
+        transform: scale(1.05);
+    }
+    /*--- Columna del texto (derecha) ---*/
+    .columna-texto {
+        flex: 1;
+    }
+    /*--- Badge de información ---*/
+    .badge-info {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(90deg, #811cb0, #9d4edd); /* Colores del SVG */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: -20px;
+        box-shadow: 0 5px 15px rgba(129, 28, 176, 0.4);
+    }
+    /*--- Título principal ---*/
+    .titulo-principal {
+        font-family: 'Montserrat';
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #2d1b69; 
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    /*--- Subtítulo principal ---*/
+    .subtitulo-principal {
+        font-family: 'Poppins';
+        text-align: center;
+        font-size: 1.2rem;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+    /*--- Contenedor de estadísticas ---*/
+    .contenedor-estadisticas {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+    /*--- Cada estadística individual ---*/
+    .estadistica {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        border: 2px solid rgba(129, 28, 176, 0.1);
+        transition: transform 0.3s ease;
+        min-width: 200px;
+        flex: 1;
+    }
+    .estadistica:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(129, 28, 176, 0.15);
+    }
+    .numero-estadistica {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.7rem;
+        font-weight: 100;
+        color: #811cb0; 
+    }
+    .texto-estadistica {
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.4;
+    }
+    /*--- Contenedor de botones ---*/
+    .contenedor-botones {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap; /* Para responsive */
+        justify-content: flex-start; /* Alineación a la izquierda */
+    }
+    /*--- Estilos base para todos los botones ---*/
+    .boton-navegacion {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 28px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        flex: 1;
+        min-width: 200px; /* Ancho mínimo para consistencia */
+        justify-content: center;
+        z-index: 999; 
+
+    }
+
+    /*--- Botón 1: Prevención del Embarazo ---*/
+    .boton-prevencion {
+        background: linear-gradient(90deg, #811cb0, #9d4edd);
+        color: white;
+        box-shadow: 0 5px 20px rgba(129, 28, 176, 0.4);
+    }
+    .boton-prevencion:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(129, 28, 176, 0.6);
+        background: linear-gradient(90deg, #9d4edd, #811cb0); /* Inverso al hover */
+    }
+
+    /*--- Botón 2: Métodos Preventivos ---*/
+    .boton-metodos {
+        background: transparent;
+        color: #811cb0;
+        border: 2px solid #811cb0;
+    }
+    .boton-metodos:hover {
+        background: rgba(129, 28, 176, 0.1);
+        transform: translateY(-3px);
+        color: #811cb0;
+    }
+
+    /*--- Botón 3: Objetivo Vital ---*/
+    .boton-objetivo {
+        background: linear-gradient(90deg, #ff416c, #ff4b2b);
+        color: white;
+        box-shadow: 0 5px 20px rgba(255, 65, 108, 0.4);
+    }
+    .boton-objetivo:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(255, 65, 108, 0.6);
+        background: linear-gradient(90deg, #ff4b2b, #ff416c); /* Inverso al hover */
+    }
+    /*--------------------------------------------*/
+    /* ANIMACIONES SUAVES AL ENTRAR EN LA PAGINA */
+    /*------------------------------------------*/
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .contenedor-inicial {
+        animation: aparecer 0.8s ease-out;
+    }
+
+
+    /*-------------------------*/
+    /*-- SECCIÓN PREVENCIÓN --*/
+    /*-----------------------*/
+    /*--- Contenedor principal de la sección ---*/
+    .seccion-prevencion {
+        padding: 10px 40px;
+        margin-left: 80px;
+        background: linear-gradient(135deg, #ffffff 0%, #f9f7ff 100%);
+        border-top: 10px solid #b014e9;
+    }
+    /*--- Contenedor general para centrar contenido ---*/
+    .contenedor-general {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    /*--- Encabezado de la sección ---*/
+    .encabezado-seccion {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .titulo-seccion {
+        font-family: 'Montserrat';
+        font-size: 3rem;
+        color: #33188e;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .descripcion-seccion {
+        font-family: 'Poppins';
+        font-size: 1.3rem;
+        color: #5d5d5d;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+
+    /*---------------------------------------------*/
+    /* BLOQUE ¿QUÉ ES LA PREVENCIÓN DEL EMBARAZO? */
+    /*-------------------------------------------*/
+    .bloque-contenido {
+        margin-bottom: 100px;
+    }
+    /*--- Contenedor de dos columnas ---*/
+    .contenedor-doble-columna {
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+    }
+    /*--- Columna de contenido izquierda ---*/
+    .columna-contenido {
+        flex: 1;
+    }
+    /*--- Subtitulo de contenido --*/
+    .subtitulo-contenido {
+        font-family: 'Montserrat';
+        font-size: 2rem;
+        color: #2d1b69;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    /*--- Ajustes del Concepto principal ---*/
+    .concepto-principal1 {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        border-left: 5px solid #9d4edd;
+        border-bottom: 5px solid #9d4edd;
+    }
+    .texto-concepto1 {
+        font-family: 'Poppins';
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+    .texto-concepto1 strong {
+        color: #9d4edd;
+    }
+    /*--- Lista de aspectos importantes ---*/
+    .lista-aspectos {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .aspecto-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 15px;
+        font-family: 'Poppins';
+        color: #000000;
+        font-size: 1.05rem;
+    }
+    /*--- Ajustes de todo la Caja de importancia ---*/
+    .caja-importancia {
+        background: linear-gradient(100deg, #e3cb7c, #ffeaa7);
+        padding: 25px;
+        border-radius: 15px;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        border: 2px solid #ffd700;
+        box-shadow: 0 20px 40px rgb(255, 132, 0)
+    }
+    .icono-importancia {
+        width: 110px;
+        height: 110px;
+    }
+    .texto-importancia {
+        font-family: 'Poppins';
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.5;
+    }
+    .texto-importancia strong {
+        color: #d35400;
+    }
+    /*--- Ajustes de la Columna de derecha ---*/
+    .columna-imagen {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .marco-imagen-contenido {
+        background: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(157, 78, 221, 0.2);
+        overflow: hidden;
+    }
+    .imagen-conceptual {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        transition: transform 0.5s ease;
+    }
+    .leyenda-imagen {
+        background: rgba(157, 78, 221, 0.1);
+        margin-top: 15px;
+        padding: 12px 15px;
+        border-radius: 8px;
+        font-family: 'Poppins';
+        font-size: 1rem;
+        color: #9d4edd;
+        align-items: center;
+        gap: 10px;
+    }
+    /*--- Ajustes de la Tarjeta con estadística ---*/
+    .tarjeta-estadistica {
+        background: linear-gradient(135deg, #ab73d8, #8f00d1);  
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 15px 30px rgba(140, 0, 255, 0.4);
+    }
+    .numero-estadistica {
+        font-family: 'Montserrat';
+        color: #000000;
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .texto-estadistica {
+        font-family: 'Poppins';
+        color: #000000;
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+
+    /*--------------------------*/
+    /* BLOQUE EDUCACIÓN SEXUAL */
+    /*------------------------*/
+    .bloque-educacion {
+        margin-bottom: 100px;
+    }
+    .encabezado-bloque {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .titulo-bloque {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        color: #2d1b69;
+        margin-top: -50px;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .subtitulo-bloque {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    /*--- Contenedor de tarjetas ---*/
+    .contenedor-tarjetas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    /*--- Tarjetas individuales de educación ---*/
+    .tarjeta-educacion {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(187, 47, 234, 0.496);
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .tarjeta-educacion:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(26, 202, 255, 0.362);
+    }
+    /*--- Cabecera de tarjeta ---*/
+    .cabecera-tarjeta {
+        padding: 25px 25px 15px;
+        display: flex;
+        align-items: center;
+        gap: 150px;
+    }
+    .icono-tarjeta {
+        width: 30px;
+        height: auto;
+    }
+    .titulo-tarjeta {
+        font-family: 'Montserrat';
+        font-size: 1.5rem;
+        color: #000000;
+        margin: 0;
+    }
+    /*--- Contenido de tarjeta ---*/
+    .contenido-tarjeta {
+        margin-top: -18px;
+        text-align: left;
+        padding: 0 25px;
+        flex-grow: 1;
+    }
+    .texto-tarjeta {
+        font-family: 'Poppins';
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    .texto-tarjeta strong {
+        color: #9d4edd;
+    }
+    /*---Ajustes Grid de componentes ---*/
+    .componentes-grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .componente-item {
+        background: rgba(157, 78, 221, 0.1);
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-family: 'Poppins';
+        font-size: 0.8rem;
+        color: #9d4edd;
+        text-align: center;
+        font-weight: 100;
+    }
+    .list-edu {
+    list-style-type: disc;      
+    padding-left: 24px;         
+    margin: 0;
+    }
+    .list-edu li {
+    margin-bottom: 10px;   
+    margin-top: 12px;     
+    font-size: 16px;
+    line-height: 1.5;           
+    color: #333;
+    gap: 10px;
+    font-family: 'Poppins';
+    color: #555;
+    }
+    /*--- Imagen dentro de tarjeta ---*/
+    .imagen-tarjeta {
+        margin-top: -26px;
+        width: 550px;
+        height: auto;
+        overflow: hidden;
+    }
+    .imagen2 {
+        width: 300px;
+        height: auto;
+        display: block;
+        margin: -14px auto 10px auto;
+    }
+    .imagen3 {
+        width: 300px;
+        border-radius: 20px;
+        height: auto;
+        display: block;
+        margin: -16px auto 10px auto;
+    }
+    .imagen4 {
+        margin-top: -306px;
+        width: 300px;
+        height: auto;
+        display: block;
+        margin: 20px auto 0 auto;
+    }
+    /*--- Ajustes de cada Pie de tarjeta ---*/
+    .pie-tarjeta {
+        padding: 15px 25px;
+        background: #f8f9ff;
+        margin-top: auto;
+    }
+    .etiqueta-tarjeta {
+        display: inline-block;
+        padding: 5px 15px;
+        background: rgba(157, 78, 221, 0.2);
+        color: #9d4edd;
+        border-radius: 50px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+
+    /*---------------------------------------*/
+    /* BLOQUE: IMPACTO PSICOLÓGICO Y FÍSICO */
+    /*-------------------------------------*/
+    .icono-tarjeta1 {
+        width: 70px;
+        height: auto;
+    }
+    .bloque-impacto {
+        margin-top: 50px;
+    }
+    /*--- Contenedor de impacto en dos columnas ---*/
+    .contenedor-impacto {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+    /*--- Columnas de impacto ---*/
+    .columna-impacto {
+        flex: 1;
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
+    .impacto-psicologico {
+        border-top: 5px solid #6c63ff;
+        border-bottom: 5px solid #36d1dc;
+    }
+    .impacto-fisico {
+        border-top: 5px solid #36d1dc;
+        border-bottom: 5px solid #6c63ff;
+    }
+    /*--- Ajustes de la Cabecera de impacto ---*/
+    .cabecera-impacto {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .icono-impacto {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        flex-shrink: 0;
+    }
+    .titulo-impacto {
+        font-family: 'Montserrat';
+        font-size: 1.8rem;
+        color: #2d1b69;
+        margin: 0;
+    }
+    /*--- Ajustes de la Lista de impactos ---*/
+    .lista-impactos {
+        margin-bottom: 30px;
+    }
+    .item-impacto {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 25px;
+        align-items: flex-start;
+    }
+    .numero-item {
+        background: linear-gradient(135deg, #9d4edd, #811cb0);
+        color: white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+    .contenido-item h5 {
+        margin-top: 7px;
+        text-align: justify;
+        font-family: 'Montserrat';
+        font-size: 1.2rem;
+        color: #2d1b69;
+        margin-bottom: 5px;
+    }
+    .contenido-item p {
+        font-family: 'Poppins';
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    /*--- Ajustes de la Imagen de impacto ---*/
+    .imagen-impacto {
+        width: 100%;
+        height: 250px;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+    }
+    .imagen-impacto img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .leyenda-impacto {
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 12px 20px;
+        font-family: 'Poppins';
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    /*--- Nota importante al final ---*/
+    .nota-importante {
+        background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+        padding: 30px;
+        border-radius: 20px;
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        border: 2px solid #2196f3;
+        max-width: 900px;
+        margin: 40px auto; 
+    }
+    .texto-nota {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+        color: #1565c0;
+        line-height: 1.6;
+    }
+    .texto-nota strong {
+        color: #0d47a1;
+    }
+
+
+    /*------------------------------*/
+    /* SECCIÓN MÉTODOS PREVENTIVOS */
+    /*------------------------------*/
+    /*--- Contenedor principal de la sección ---*/
+    .seccion-metodos {
+        padding: 0px 40px;
+        padding-bottom: 80px;
+        margin-left: 80px;
+        background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+        border-top: 10px solid #36d1dc;
+    }
+    /* Ajustes del contenido ¿Que son los Metodos Anticonceptivos */
+    .bloque-concepto {
+        margin-bottom: 100px;
+    }
+    .contenedor-concepto {
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+    }
+    /*--- Columna concepto puesto a la izquierda ---*/
+    .columna-concepto {
+        flex: 1;
+    }
+    .subtitulo-contenido {
+        max-width: 1000px;
+        font-family: 'Montserrat';
+        margin-top: -30px;
+        font-size: 2rem;
+        color: #2d1b69;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .subtitulo-contenido i {
+        color: #36d1dc;
+        font-size: 1.8rem;
+    }
+    /*--- Ajustes del Concepto principal ---*/
+    .concepto-principal2 {
+        flex: 1;
+        max-width: 530px;
+        width: 100%;
+        background: white;
+        padding: 38px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        border-right: 5px solid #00cff8;
+        border-top: 5px solid #00cff8;
+        display: flex;
+        flex-direction: column;
+    }
+    .texto-concepto2 {
+        margin-top: -2px;
+        font-family: 'Poppins';
+        font-size: 1.15rem;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 35px;
+    }
+    .texto-concepto strong {
+        color: #36d1dc;
+    }
+    /*--- Ajustes de las Grid con características ---*/
+    .icono-tarjeta2 {
+        width: 40px;
+        height: auto;
+    }
+    .caracteristicas-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .caracteristica {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        padding: 10px;
+        background: #f8fdff;
+        border-radius: 15px;
+        border-left: 4px solid #36d1dc;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .caracteristica:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(54, 209, 220, 0.15);
+    }
+    .texto-caracteristica h4 {
+        margin-top: -2px;
+        font-family: 'Montserrat';
+        font-size: 1.1rem;
+        color: #2d1b69;
+        margin-bottom: 5px;
+    }
+    .texto-caracteristica p {
+        font-family: 'Poppins';
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    /*--- Columna del concepto puesto a la derecha ---*/
+    .cuadro-info-adicional {
+        margin-top: 80px;
+        flex: 1;
+        max-width: 600px;
+        width: 100%;
+        background-color: #f8f9fa;
+        border-radius: 20px;
+        padding: 38px;            
+        border-left: 4px solid #da1d95;
+        border-bottom: 4px solid #da1d95;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        font-family: 'Poppins';
+        flex-direction: column; 
+    }
+    .encabezado-cuadro {
+        margin-top: -20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eaeaea;
+        padding-bottom: 10px;
+    }
+    .encabezado-cuadro h3 {
+        margin: 0 0 0 10px;
+        color: #2c3e50;
+        font-size: 1.2rem;
+        font-family: 'Montserrat';
+        font-weight: 600;
+    }
+    .icono-info {
+        width: 44px;
+        height: auto;
+    }
+    .contenido-cuadro {
+        color: #555;
+        font-family: 'Poppins';
+        font-weight: 400;
+        line-height: 1.6;
+    }
+    .contenido-cuadro p {
+        margin-bottom: 12px;
+    }
+    .contenido-cuadro strong {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        color: #2c3e50;
+    }
+    .lista-metodos {
+        margin: 15px 0;
+        padding-left: 20px;
+        font-family: 'Poppins';
+    }
+    .lista-metodos li {
+        margin-bottom: 8px;
+        color: #444;
+        font-weight: 400;
+    }
+    .nota-proyecto {
+        background-color: #e8f4fc;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-top: 15px;
+        font-style: italic;
+        color: #2c3e50;
+        text-align: center;
+        border: 1px dashed #a8d0e6;
+        font-family: 'Poppins';
+        font-weight: 300;
+    }
+
+
+    /*----------------------------------------*/
+    /* BLOQUE CONTENIDO TIPOS MÁS CONOCIDOS  */
+    /*--------------------------------------*/
+    .bloque-tipos {
+        margin-bottom: 100px;
+    }
+    .encabezado-bloque {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .titulo-bloque {
+        font-family: 'Montserrat';
+        font-size: 2.5rem;
+        color: #2d1b69;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .icon-tarjeta {
+        width: 44px;
+        height: auto;
+        margin-bottom: -30px;
+    }
+    .subtitulo-bloque {
+        font-family: 'Poppins';
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    /*--- Contenedor horizontal de métodos ---*/
+    .contenedor-metodos-horizontal {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        margin-bottom: 60px;
+        flex-wrap: nowrap; 
+    }
+    /*--- Tarjetas individuales de métodos ---*/
+    .tarjeta-metodo {
+        flex: 1;
+        min-width: 300px;
+        max-width: 380px;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        border-right: 5px solid #00cff8ad;
+        border-left: 5px solid #00cff8ad;
+        border-bottom: 5px solid #00cff8ad;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+    .tarjeta-metodo:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 50px rgba(54, 209, 220, 0.2);
+    }
+    /*--- Cabecera de tarjeta de método ---*/
+    .cabecera-tarjeta-metodo {
+        padding: 25px 25px 15px;
+        background: linear-gradient(135deg, #36d1dc, #5b86e5);
+        color: white;
+        position: relative;
+    }
+    .nombre-metodo {
+        font-family: 'Montserrat';
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+    .categoria-metodo {
+        display: inline-block;
+        padding: 5px 15px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50px;
+        font-family: 'Poppins';
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    /*--- Contenido de tarjeta de método ---*/
+    .contenido-tarjeta-metodo {
+        padding: 25px;
+        flex-grow: 1;
+    }
+    .descripcion-metodo, .funcion-metodo {
+        font-family: 'Poppins';
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+    .descripcion-metodo strong, .funcion-metodo strong {
+        color: #36d1dc;
+    }
+    /*--- Detalles del método ---*/
+    .detalles-metodo {
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0;
+        padding: 20px;
+        background: #f8fdff;
+        border-radius: 15px;
+        border: 1px solid rgba(54, 209, 220, 0.2);
+    }
+    .detalle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .etiqueta-detalle {
+        font-family: 'Poppins';
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 5px;
+    }
+    .valor-detalle {
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: #36d1dc;
+    }
+    /*--- Imagen dentro de tarjeta de método ---*/
+    .imagen-metodo-tarjeta {
+        width: 340px;
+        height: 250px;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        margin-top: 20px;
+    }
+    .imagen-metodo-tarjeta img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    .tarjeta-metodo:hover .imagen-metodo-tarjeta img {
+        transform: scale(1.05);
+    }
+    .leyenda-imagen {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px 15px;
+        font-family: 'Poppins';
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    /*--- Pie de tarjeta de método ---*/
+    .pie-tarjeta-metodo {
+        padding: 15px 25px;
+        background: #f8f9ff;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #eee;
+    }
+    .indicador-tiempo, .indicador-proteccion {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.9rem;
+        color: #666;
+    }
+    .indicador-tiempo {
+        color: #36d1dc;
+    }
+    .indicador-proteccion {
+        color: #ff0000;
+    }
+    /*--- Nota profesional ---*/
+    .nota-profesional {
+        background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+        padding: 15px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        border: 2px solid #ffd700;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-shadow: 0 20px 40px rgb(255, 132, 0)
+    }
+    .contenido-nota h5 {
+        margin-top: 10px;
+        font-family: 'Montserrat';
+        color: #d35400;
+        margin-bottom: 8px;
+        font-size: 1.3rem;
+    }
+    .contenido-nota p {
+        font-family: 'Poppins';
+        color: #333;    
+        line-height: 1.5;
+        font-size: 1.05rem;
+    }
+
+
+    /*---------------------------------------------------*/
+    /* BLOQUE CONTENIDO IMPORTANCIA DEL USO RESPONSABLE */
+    /*-------------------------------------------------*/
+    .bloque-responsable {
+        width: 80%;
+        margin-bottom: 100px;
+        margin: 0 auto 100px auto;
+    }
+    .contenedor-responsable {
+        display: flex;           
+        gap: 60px;
+        max-width: 1300px;       
+        margin: 0 auto;          
+        align-items: stretch;
+    }
+    /*--- Columna izquierda ---*/
+    .columna-responsable {
+        flex: 1;
+    }
+    .concepto-responsable {
+        background: white;
+        padding: 35px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgb(41, 127, 185);
+        border-left: 5px solid #2980b9;
+    }
+    .titulo-responsable {
+        margin-top: -2px;
+        font-family: 'Montserrat';
+        font-size: 1.8rem;
+        color: #2d1b69;
+    }
+    .texto-responsable {
+        margin-top: -20px;
+        font-family: 'Poppins';
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 10px;
+    }
+    .texto-responsable strong {
+        color: #2980b9;
+    }
+    /*--- Elementos de responsabilidad ---*/
+    .elementos-responsabilidad {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .elemento-resp {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        padding: 20px;
+        background: #e8f4fc;
+        border-radius: 15px;
+        transition: transform 0.3s ease;
+    }
+    .elemento-resp:hover {
+        transform: translateY(-5px);
+        background: #d4eaf7;
+    }
+    .numero-elemento {
+        width: 30px;
+        height: 30px;
+        background: #2980b9;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+    }
+    .texto-elemento h5 {
+        margin-top: 10px;
+        font-family: 'Montserrat';
+        font-size: 1.1rem;
+        color: #2d1b69;
+        margin-bottom: 5px;
+    }
+    .texto-elemento p {
+        font-family: 'Poppins';
+        color: #555;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    /*--- Columna de la derecha ---*/
+    .columna-infografia {
+        flex: 1;
+    }
+    .infografia-responsable {
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(41, 128, 185, 0.15);
+        overflow: hidden;
+    }
+    .imagen-infografia {
+        display: block;       
+        margin: 0 auto 25px;   
+        width: 400px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px;
+        display: block;
+        margin-bottom: 25px;
+    }
+    .consejos-infografia {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .consejo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 15px;
+        background: #e8f4fc;
+        border-radius: 10px;
+        font-family: 'Poppins';
+        font-size: 0.95rem;
+        color: #2980b9;
+    }
+
+    /*-------------------------------------------*/
+    /* BLOQUE CONTENIDO EFECTIVIDAD COMPARATIVA */
+    /*-----------------------------------------*/
+    .bloque-efectividad {
+        margin-bottom: 50px;  
+    }
+    .contenedor-comparativo {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; 
+        gap: 40px;               
+        margin-bottom: 50px;
+    }
+    /*--- Ajustes Tarjetas comparativas ---*/
+    .tarjeta-comparativa {
+        flex: 0 0 40%;
+        max-width: 40%;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+    }
+    .tarjeta-mujer {
+        border-top: 5px solid #e84393;
+        border-bottom: 5px solid #e84393;
+    }
+    .tarjeta-hombre {
+        border-top: 5px solid #0984e3;
+        border-bottom: 5px solid #0984e3;
+    }
+    /*--- Cabecera comparativa ---*/
+    .cabecera-comparativa {
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: #f8f9ff;
+        border-bottom: 1px solid #000000;
+    }
+    .icono-comparativa {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        flex-shrink: 0;
+    }
+    .titulo-comparativa {
+        font-family: 'Montserrat';
+        font-size: 1.8rem;
+        color: #2d1b69;
+        margin: 0;
+    }
+    /*--- Contenido comparativa ---*/
+    .contenido-comparativa {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        flex-grow: 1;
+    }
+    /*--- Gráfico circular ---*/
+    .grafico-efectividad {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .circulo-grafico {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: conic-gradient(
+            var(--color-grafico, #54bcc3) 0%,
+            var(--color-grafico, #36d1dc) calc(var(--porcentaje) * 1%),
+            #f0f0f0 calc(var(--porcentaje) * 1%),
+            #f0f0f0 100%
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .tarjeta-mujer .circulo-grafico {
+        --color-grafico: #e84393;
+    }
+    .tarjeta-hombre .circulo-grafico {
+        --color-grafico: #0984e3;
+    }
+    .porcentaje-grafico {
+        font-family: 'Montserrat';
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2d1b69;
+        background: white;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    .leyenda-grafico p {
+        font-family: 'Poppins';
+        color: #666;
+        text-align: center;
+        font-size: 1.1rem;
+        max-width: 250px;
+    }
+    /*--- Lista de beneficios ---*/
+    .lista-beneficios {
+        width: 100%;
+    }
+    .beneficio {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding: 15px;
+        margin-bottom: 15px;
+        background: #f8f9ff;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+    }
+    .beneficio:hover {
+        transform: translateX(5px);
+        background: #eef1ff;
+    }
+    .porcentaje-beneficio {
+        font-family: 'Montserrat';
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--color-grafico, #36d1dc);
+        min-width: 70px;
+        text-align: center;
+    }
+    .texto-beneficio h5 {
+        font-family: 'Montserrat';
+        font-size: 1.1rem;
+        color: #2d1b69;
+        margin-bottom: 5px;
+    }
+    .texto-beneficio p {
+        font-family: 'Poppins';
+        color: #666;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    /*--- Pie comparativa ---*/
+    .pie-comparativa {
+        padding: 20px 30px;
+        background: #f8f9ff;
+        border-top: 1px solid #eee;
+    }
+    .resumen-impacto {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #2d1b69;
+    }
+    .resumen-impacto i {
+        color: var(--color-grafico, #36d1dc);
+        font-size: 1.3rem;
+    }
+    /* --- Conclusión efectividad --- */
+    .conclusion-efectividad {
+        background: linear-gradient(135deg, #dfe6e9, #b2bec3);
+        padding: 10px 40px; 
+        border-radius: 20px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        max-width: 800px;
+        margin: 40px auto -60px auto;
+        border: 2px solid #636e72;
+        position: relative;
+        z-index: 2;
+    }
+    .texto-conclusion h5 {
+        margin-top: 20px;
+        font-family: 'Montserrat';
+        font-size: 1.5rem;
+        color: #2d3436;
+        margin-bottom: 10px;
+    }
+    .texto-conclusion p {
+        font-family: 'Poppins';
+        color: #2d3436;
+        line-height: 1.6;
+        font-size: 1.1rem;
+    }
+    .icono-import {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    /*---------------------------------------*/
+    /*-- SECCION CONTENIDO OBJETIVO VITAL --*/
+    /*-------------------------------------*/
+    #seccion-objetivo-vital {
+        padding: 0px 40px;
+        padding-bottom: 80px;
+        margin-left: 80px;
+        background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+        border-top: 10px solid #dc36b0;
+    }
+    .encabezado-seccion {
+        text-align: center;
+        margin-bottom: 60px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .titulo-seccion {
+        font-family: 'Montserrat'; 
+        font-size: 3.2rem;
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+    .subtitulo-seccion {
+        font-family: 'Poppins';
+        font-size: 1.3rem;
+        color: #2d1b69;
+        opacity: 0.9;
+        margin-bottom: 2px;
+        font-weight: 500;
+    }
+    .icono-tarj-vital {
+        width: 90px;
+        height: auto;
+    }
+    /* Contenedor de las Tarjetas */
+    .contenedor-tarjetas-vitales {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        width: 5000px;
+        max-width: 1200px;
+        margin: 0 auto 10px;
+    }
+    /* Ajustes de Estilos Generales */
+    .tarjeta-vital {
+        border-radius: 24px;
+        padding: 35px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        border: 2px solid transparent;
+    }
+    .tarjeta-vital:hover {
+        transform: translateY(-10px);
+    }
+    .tarjeta-rosa {
+        background: linear-gradient(135deg, rgba(255, 65, 108, 0.1) 0%, rgba(255, 65, 108, 0.05) 100%);
+        border-color: rgba(255, 65, 108, 0.3);
+        box-shadow: 0 15px 35px rgba(255, 65, 108, 0.15);
+    }
+    .tarjeta-azul {
+        background: linear-gradient(135deg, rgba(9, 132, 227, 0.1) 0%, rgba(116, 185, 255, 0.05) 100%);
+        border-color: rgba(9, 132, 227, 0.3);
+        box-shadow: 0 15px 35px rgba(9, 132, 227, 0.15);
+    }
+    /* ENCABEZADO DE TARJETA */
+    .encabezado-tarjeta-vital {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .titulo-tarjeta-vital h3 {
+        font-family: 'Montserrat';
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+        margin-top: -2px;
+        font-weight: 700;
+    }
+    .tarjeta-rosa .titulo-tarjeta-vital h3 {
+        color: #ff416c;
+    }
+    .tarjeta-azul .titulo-tarjeta-vital h3 {
+        color: #0984e3;
+    }
+    .titulo-tarjeta-vital p {
+        font-family: 'Poppins';
+        color: #2d1b69;
+        opacity: 0.8;
+        margin-bottom: -5px;
+        font-size: 1rem;
+    }
+    /* CONTENIDO DE TARJETA */
+    .puntos-vitales {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+    .punto-item {
+        margin-top: -30px;
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    .numero-punto {
+        margin-top: 19px;
+        font-family: 'Montserrat';
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        flex-shrink: 0;
+    }
+    .tarjeta-rosa .numero-punto {
+        background: rgba(255, 65, 108, 0.15);
+        color: #ff416c;
+    }
+    .tarjeta-azul .numero-punto {
+        background: rgba(9, 132, 227, 0.15);
+        color: #0984e3;
+    }
+    .texto-punto h4 {
+        font-family: 'Montserrat';
+        font-size: 1.2rem;
+        margin-bottom: -5px;
+        font-weight: 600;
+    }
+    .tarjeta-rosa .texto-punto h4 {
+        color: #e83671;
+    }
+    .tarjeta-azul .texto-punto h4 {
+        color: #0a7cd6;
+    }
+    .texto-punto p {
+        font-family: 'Poppins';
+        color: #2d1b69;
+        opacity: 0.85;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    /* PIE DE TARJETA */
+    .pie-tarjeta-vital {
+        margin-top: 4px;
+        padding-top: 20px;
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+    }
+    .etiqueta-vital {
+        font-family: 'Poppins', sans-serif; /* AGREGADO */
+        display: inline-block;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .tarjeta-rosa .etiqueta-vital {
+        background: rgba(255, 65, 108, 0.2);
+        color: #ff416c;
+    }
+    .tarjeta-azul .etiqueta-vital {
+        background: rgba(9, 132, 227, 0.2);
+        color: #0984e3;
+    }
+    /* IMÁGENES DE LAS TARJETAS */
+    .imagen-tarjeta-container {
+        margin-top: 35px; 
+        margin-bottom: 50px;
+    }
+    .marco-imagen-vital {
+        width: 100%;
+        height: 500px;
+        border-radius: 16px;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+    }
+    .marco-imagen-vital.rosa {
+        background: linear-gradient(135deg, rgba(255, 65, 108, 0.08), rgba(255, 65, 108, 0.02));
+        border: 2px dashed rgba(255, 65, 108, 0.3);
+    }
+    .marco-imagen-vital.azul {
+        background: linear-gradient(135deg, rgba(9, 132, 227, 0.08), rgba(116, 185, 255, 0.02));
+        border: 2px dashed rgba(9, 132, 227, 0.3);
+    }
+    .imagen-vital {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .texto-imagen-vital {
+        font-family: 'Poppins'; 
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(45, 27, 105, 0.8);
+        color: white;
+        padding: 10px 15px;
+        text-align: center;
+        font-size: 0.9rem;
+        font-style: italic;
+    }
+    .marco-imagen-vital.rosa .texto-imagen-vital {
+        background: rgba(255, 65, 108, 0.8);
+    }
+    .marco-imagen-vital.azul .texto-imagen-vital {
+        background: rgba(9, 132, 227, 0.8);
+    }
+    /* MENSAJE FINAL  */
+    .mensaje-conclusion {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 40px;
+        background-color: #f4eeee;
+        border-radius: 20px;
+        border: 1px solid #6a00ff;
+        max-width: 900px;
+        margin: 40px auto;
+    }
+    .contenido {
+        text-align: left;
+    }
+    .titulo-conclusion {
+        margin-top: -2px;
+        font-family: 'Montserrat';
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+        color: #3a3a3a;
+        font-weight: 700;
+    }
+    .texto-conclusion {
+        font-family: 'Poppins';
+        font-size: 1rem;
+        color: #4a4a4a;
+        line-height: 1.6;
+        margin: 0;
+    }
+    .icono-tarjfinal {
+        width: 100px;
+        height: auto;
+    }
+
+    /*------------------------*/
+    /*------- FOOTER  -------*/
+    /*----------------------*/
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+
+        background-color: #000000;
+        color: #FFFFFF;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 14px;
+        z-index: 999;
+        box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.7);
+    }

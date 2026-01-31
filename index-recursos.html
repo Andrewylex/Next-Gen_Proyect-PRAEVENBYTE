@@ -1,0 +1,311 @@
+<!-- Concreta el Pagina a la version actual de HTML -->
+<!DOCTYPE html>
+<!-- Degsina la Pagina al lenguaje Español -->
+<html lang="es">
+
+<head>
+
+    <!-- Permite manejar diferentes Simbolos y Carateres Especiales -->
+    <meta charset="UTF-8">
+    <!-- Permite funcionalidad de la Web en Dispositivos Moviles -->
+    <!-- No tiene mucho importancia porque solo usaremos PC, pero lo ajusta a otros dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Nombra al Sitio Web -->
+    <title>PraevenByte</title>
+    <!-- Permite dar conexion al archivo CSS -->
+    <link rel="stylesheet" href="Style-recursos.css">
+    
+</head> 
+
+
+<body >
+    
+    <!-- La Barra superior con el nombre del proyecto-->
+    <header>
+        <nav class="navbar fijo">
+            <a href="index-inicio.html" class="nombreproyecto">NextGen</a>
+        </nav> 
+    </header>
+
+    <!-- SIDEBAR ORIGINAL -->
+    <aside class="sidebar">
+        <a href="index-estadisticas.html" class="sidebar-item">
+            <span class="icon"><img src="iconsfinal/Porblematica.jpeg" width="30"/></span>
+            <span class="texto">Una Problemática</span>
+        </a>
+        <a href="index-info.html" class="sidebar-item">
+            <span class="icon"><img src="iconsfinal/descubre mas.jpeg" width="30"/></span>
+            <span class="texto">Descubre Más</span>
+        </a>
+        <a href="index-recursos.html" class="sidebar-item">
+            <span class="icon"><img src="iconsfinal/enlaces.jpeg" width="30"/></span>
+            <span class="texto">Enlaces</span>
+        </a>
+    </aside>
+
+    <main>
+        <!-- SECCIÓN 1: PROYECTO (1 CARD CENTRADA) -->
+        <section class="content-section" >
+            <div class="section-header">
+                <h2><i class="fas fa-code"></i> Nuestro Proyecto</h2>
+                <p>La iniciativa principal desde la cual trabajamos</p>
+            </div>
+            
+            <div class="single-card-container">
+                <div class="card">
+                    <div class="card-inner">
+                        <!-- FRENTE -->
+                        <div class="card-front">
+                            <img src="png/recursos/logo-proyectogeneral.png" alt="MSP" class="card-logo">
+                            <h3>Praevenbyte</h3>
+                            <p class="card-subtitle">Proyecto Principal</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Pasa el cursor</div>
+                        </div>
+                        <!-- REVERSO -->
+                        <div class="card-back">
+                            <h4>Innovación Preventiva</h4>
+                            <p class="card-desc">Cuenta oficial digital para la prevención y toma responsable de decisiones en jóvenes.</p>
+                            <a href="https://www.instagram.com/praevenbyte/" target="_blank" class="card-button">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CENTROS DE AYUDA (8 CARDS EN 2 FILAS DE 4) -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-hands-helping"></i> Centros de Ayuda</h2>
+                <p>Recursos e instituciones de apoyo confiables</p>
+            </div>
+            
+            <!-- 8 CARDS EN GRID DE 4-4 -->
+            <div class="cards-grid">
+                <!-- Fila 1 de 4 -->
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-ministeriodesalud.png" alt="MSP" class="card-logo">
+                            <h3>Ministerio de Salud</h3>
+                            <p class="card-subtitle">Salud Pública</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Más info</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Atención en Salud</h4>
+                            <p class="card-desc">Ente rector de la salud en Ecuador. Información oficial y centros de salud.</p>
+                            <a href="https://www.salud.gob.ec/" target="_blank" class="card-button">
+                                <i class="fas fa-external-link-alt"></i> Sitio Web
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-unicef.png" alt="UNICEF" class="card-logo">
+                            <h3>UNICEF Ecuador</h3>
+                            <p class="card-subtitle">Niñez y Adolescencia</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Más info</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Protección Infantil</h4>
+                            <p class="card-desc">Derechos de niños, niñas y adolescentes. Recursos educativos y de protección.</p>
+                            <a href="https://www.unicef.org/ecuador/" target="_blank" class="card-button">
+                                <i class="fas fa-external-link-alt"></i> Sitio Web
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-oms.png" alt="OMS" class="card-logo">
+                            <h3>Organización Mundial de la Salud</h3>
+                            <p class="card-subtitle">Salud Global</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Más info</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Información Global</h4>
+                            <p class="card-desc">Autoridad mundial en salud pública. Fuente confiable de información técnica.</p>
+                            <a href="https://www.who.int/es" target="_blank" class="card-button">
+                                <i class="fas fa-external-link-alt"></i> Sitio Web
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front"> 
+                            <img src="png/recursos/logo-girlpower.png" alt="Salud Mental" class="card-logo">
+                            <h3>GirlPowerEcuador</h3>
+                            <p class="card-subtitle">Cuida Tu Cuerpo</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Más info</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Salud Mental</h4>
+                            <p class="card-desc">Apoyo psicológico gratuito o a bajo costo. Talleres y recursos emocionales a mujeres.</p>
+                            <a href="https://girlpowerecuador.com/" target="_blank" class="card-button">
+                                <i class="fas fa-external-link-alt"></i> Sitio Web
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fila 2 de 4 -->
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-hablarconalquin.png" alt="Línea Vida" class="card-logo">
+                            <h3>"Habla con Alguien"</h3>
+                            <p class="card-subtitle">Línea 098 019 9191</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Más info</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Apoyo en Crisis</h4>
+                            <p class="card-desc">Línea confidencial de escucha y contención emocional para prevención.</p>
+                            <a href="tel:0980199191" class="card-button">
+                                <i class="fas fa-phone"></i> Llamar Ahora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-mies.png" alt="MIES" class="card-logo">
+                            <h3>MIES</h3>
+                            <p class="card-subtitle">Inclusión Social</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Más info</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Protección Social</h4>
+                            <p class="card-desc">Apoyo a grupos vulnerables, servicios de desarrollo infantil y protección.</p>
+                            <a href="https://www.inclusion.gob.ec/" target="_blank" class="card-button">
+                                <i class="fas fa-external-link-alt"></i> Sitio Web
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-defensoriadelpueblo.png" alt="Defensoría" class="card-logo">
+                            <h3>Defensoría del Pueblo</h3>
+                            <p class="card-subtitle">Derechos Humanos</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Más info</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Defensa de Derechos</h4>
+                            <p class="card-desc">Institución que protege y promueve los derechos humanos en Ecuador.</p>
+                            <a href="https://www.dpe.gob.ec/" target="_blank" class="card-button">
+                                <i class="fas fa-external-link-alt"></i> Sitio Web
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-ministeriodeeducacion.png" alt="Educación" class="card-logo">
+                            <h3>Ministerio de Educación</h3>
+                            <p class="card-subtitle">Educación</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Más info</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Recursos Educativos</h4>
+                            <p class="card-desc">Plataformas de aprendizaje, información sobre becas y programas educativos.</p>
+                            <a href="https://educacion.gob.ec/" target="_blank" class="card-button">
+                                <i class="fas fa-external-link-alt"></i> Sitio Web
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: INSTITUTO (3 CARDS EN 2 FILAS) -->
+        <section class="content-section" >
+            <div class="section-header">
+                <h2><i class="fas fa-graduation-cap"></i> Nuestro Instituto</h2>
+                <p>El instituto donde se desarrolla este proyecto</p>
+            </div>
+            
+            <!-- FILA 1: 1 CARD CENTRADA (WEB) -->
+            <div class="instituto-row single">
+                <div class="card card-colegio">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-colegio.png" alt="Educación" class="card-logo">
+                            <h3>Sitio Web</h3>
+                            <p class="card-subtitle">Instituto Coello</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Visitar</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Portal Oficial</h4>
+                            <p class="card-desc">Accede al sitio web oficial del Instituto Tecnológico Superior Coello.</p>
+                            <a href="https://institutocoello.com/" target="_blank" class="card-button web-btn">
+                                <i class="fas fa-external-link-alt"></i> Ir al Sitio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FILA 2: 2 CARDS (INSTAGRAM Y FACEBOOK) -->
+            <div class="instituto-row double">
+                <div class="card card-colegio">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-colegio.png" alt="Educación" class="card-logo">
+                            <h3>Instagram</h3>
+                            <p class="card-subtitle">@institutocoello</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Seguir</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Red Social</h4>
+                            <p class="card-desc">Sigue la cuenta oficial en Instagram para fotos, eventos y noticias.</p>
+                            <a href="https://www.instagram.com/institutocoello/?hl=es" target="_blank" class="card-button insta-btn">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-colegio">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="png/recursos/logo-colegio.png" alt="Educación" class="card-logo">
+                            <h3>Facebook</h3>
+                            <p class="card-subtitle">Instituto Coello</p>
+                            <div class="card-hint"><i class="fas fa-mouse-pointer"></i> Seguir</div>
+                        </div>
+                        <div class="card-back">
+                            <h4>Comunidad</h4>
+                            <p class="card-desc">Únete a la comunidad en Facebook para eventos y anuncios importantes.</p>
+                            <a href="https://www.facebook.com/institutocoelloec/" target="_blank" class="card-button fb-btn">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Se designa el Pie de Pagina-->
+    <footer class="footer">
+        <p>© 2025-2026 PRAEVENBYTE · Prevención y Educación para decisiones responsables - Proyecto Educativo</p>
+    </footer>
+
+</body>
+
+</html>

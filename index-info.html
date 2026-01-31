@@ -1,0 +1,1327 @@
+<!-- Concreta el Pagina a la version actual de HTML -->
+<!DOCTYPE html>
+<!-- Degsina la Pagina al lenguaje Español -->
+<html lang="es">
+
+<head>
+
+    <!-- Permite manejar diferentes Simbolos y Carateres Especiales -->
+    <meta charset="UTF-8">
+    <!-- Permite funcionalidad de la Web en Dispositivos Moviles -->
+    <!-- No tiene mucho importancia porque solo usaremos PC, pero lo ajusta a otros dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Nombra al Sitio Web -->
+    <title>PraevenByte</title>
+    <!-- Permite dar conexion al archivo CSS -->
+    <link rel="stylesheet" href="Style-info.css">
+    
+</head> 
+
+<body>
+    
+    <!-- La Barra superior con el nombre del proyecto-->
+    <header>
+        <nav class="navbar fijo">
+            <a href="index-inicio.html" class="nombreproyecto">NextGen</a>
+        </nav> 
+    </header>
+
+    <!-- SIDEBAR ORIGINAL -->
+    <aside class="sidebar">
+        <a href="index-estadisticas.html" class="sidebar-item">
+            <span class="icon"><img src="iconsfinal/Porblematica.jpeg" width="30"/></span>
+            <span class="texto">Una Problemática</span>
+        </a>
+        <a href="index-info.html" class="sidebar-item">
+            <span class="icon"><img src="iconsfinal/descubre mas.jpeg" width="30"/></span>
+            <span class="texto">Descubre Más</span>
+        </a>
+        <a href="index-recursos.html" class="sidebar-item">
+            <span class="icon"><img src="iconsfinal/enlaces.jpeg" width="30"/></span>
+            <span class="texto">Enlaces</span>
+        </a>
+    </aside>
+
+    
+    <!-- Creacion de Un Panel de datos educativos con carrusel automático -->
+    <div class="panel-educativo">
+        <div class="contenedor-panel">
+            <!-- Encabezado del panel de datos -->
+            <div class="encabezado-panel">
+                <span >APRENDE:</span>
+            </div>
+            
+            <!-- Carrusel de datos (se muestran uno a uno) -->
+            <div class="carrusel-datos">
+
+                <!-- Dato 1 - Activado por Defecto -->
+                <div class="dato-item activo" >
+                    <div class="numero-dato">EL 50% </div>
+                    <div class="texto-dato">De embarazos adolescentes no estan planificados.</div>
+                </div>
+                
+                <!-- Dato 2 -->
+                <div class="dato-item" >
+                    <div class="numero-dato">1 DE CADA 5</div>
+                    <div class="texto-dato">Adolescentes inicia vida sexual sin protección.</div>
+                </div>
+                
+                <!-- Dato 3 -->
+                <div class="dato-item" >
+                    <div class="numero-dato">HAY UN -%</div>
+                    <div class="texto-dato">De Incidencia de embarazos no deseados con educacion seuxal.</div>
+                </div>
+                
+                <!-- Dato 4 -->
+                <div class="dato-item" >
+                    <div class="numero-dato">1 DE CADA 10</div>
+                    <div class="texto-dato">Adolescentes no logran culminar sus estudios.</div>
+                </div>
+                
+                <!-- Dato 5 -->
+                <div class="dato-item" >
+                    <div class="numero-dato">ENTRE 14 A 19</div>
+                    <div class="texto-dato">Es la edad promedio del embarazo en adolescentes</div>
+                </div>
+            </div>
+            
+            <!-- Botones del carrusel -->
+            <div class="controles-carrusel">
+                <!-- Botón para dato anterior -->
+                <button class="btn-control btn-anterior"></button>
+                
+                <!-- Indicadores de posición (puntos) -->
+                <div class="indicadores">
+                    <span class="indicador activo"></span>
+                    <span class="indicador"></span>
+                    <span class="indicador"></span>
+                    <span class="indicador"></span>
+                    <span class="indicador"></span>
+                </div>
+                
+                <!-- Botón para siguiente dato -->
+                <button class="btn-control btn-siguiente"></button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Seccion inicial de introduccion -->
+    <section class="seccion-inicial">
+        <!-- SVG animado de fondo -->
+        <div class="fondo-svg">
+            <!-- Dato de todo el Svg Animado     -->
+            <svg width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
+                <defs>
+                    <path id="wavepath" d="M 0 2000 0 500 Q 90.5 390 181 500 t 181 0 181 0 181 0 181 0 181 0 181 0 181 0  v1000 z" />
+                    <path id="motionpath" d="M -362 0 0 0" /> 
+                </defs>
+                <g>
+                    <use xlink:href="#wavepath" y="300" fill="#811cb0">
+                        <animateMotion dur="5s" repeatCount="indefinite">
+                            <mpath xlink:href="#motionpath" />
+                        </animateMotion>
+                    </use>
+                </g>
+            </svg>
+        </div>
+
+        <!-- Contenedor principal del contenido -->
+        <div class="contenedor-inicial">
+            <!-- División en dos columnas -->
+            <div class="contenedor-columnas">
+                
+                <!-- Columna izquierda: Imagen -->
+                <div class="columna-imagen">
+                    <div class="marco-imagen">
+                        <img src="Webp/Info/mujerstop-info.webp" class="imagen-principal">
+                    </div>
+                </div>
+
+                <!-- Columna derecha: Texto y estadísticas -->
+                <div class="columna-texto">
+                    <!-- Badge de información confiable -->
+                    <div class="badge-info">
+                        <span>Información confiable y verificada</span>
+                    </div>
+
+                    <!-- Título principal del Contenido -->
+                    <h1 class="titulo-principal">
+                        Aprende más sobre la prevención del embarazo adolescente
+                    </h1>
+
+                    <!-- Subtítulo del Contenido -->
+                    <p class="subtitulo-principal">
+                        Información clara, real y responsable para la toma de decisiones informadas.
+                    </p>
+
+                    <!-- Estadísticas del Contenido -->
+                    <div class="contenedor-estadisticas">
+                        
+                        <!-- Estadística 1 -->
+                        <div class="estadistica">
+                            <div class="numero-estadistica">+13 MM</div>
+                            <div class="texto-estadistica">Eran nacidos de madres adolescentes entre 15 a 19 años  a nivel mundial.</div>
+                        </div>
+
+                        <!-- Estadística 2 -->
+                        <div class="estadistica">
+                            <div class="numero-estadistica">1 de cada 10</div>
+                            <div class="texto-estadistica">Adolescentes de 15 a 19 años da a luz cada año.</div>
+                        </div>
+                    </div>
+
+                    <!-- Botones de navegación interna -->
+                    <div class="contenedor-botones">
+                        <!-- Botón 1: Prevención del Embarazo -->
+                        <a href="#seccion-prevencion" class="boton-navegacion boton-prevencion">
+                            <span>¿Prevención del Embarazo?</span>
+                        </a>
+
+                        <!-- Botón 2: Métodos Preventivos -->
+                        <a href="#seccion-metodos" class="boton-navegacion boton-metodos">
+                            <span>Métodos Preventivos</span>
+                        </a>
+                        <!-- Botón 3: Objetivo Vital -->
+                        <a href="#seccion-objetivo-vital" class="boton-navegacion boton-objetivo">
+                            <span>Objetivo Vital</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section >
+
+        <!-- SECCION DE CONTENIDO : ¿PREVENCIÓN DEL EMBARAZO? -->
+    <section  class="seccion-prevencion">
+        <div id="seccion-prevencion" class="contenedor-general">
+            
+            <!-- Título principal de la sección -->
+            <div class="encabezado-seccion">
+                <h2 class="titulo-seccion">
+                    ¿Prevención del Embarazo?
+                </h2>
+                <p class="descripcion-seccion">
+                    Informacion esencial para comprender la prevencion del embarazo e incluso 
+                    educacion sexual.
+                </p>
+            </div>
+            
+            <!-- Contenido ¿QUÉ ES LA PREVENCIÓN DEL EMBARAZO? -->
+            <div class="bloque-contenido">
+                <div class="contenedor-doble-columna">
+                    
+                    <!-- Columna izquierda del contenido -->
+                    <div class="columna-contenido">
+                        <h3 class="subtitulo-contenido">
+                            ¿Qué es la prevención del embarazo?
+                        </h3>
+                        
+                        <div class="concepto-principal1">
+                            <p class="texto-concepto1">
+                                La <strong>Prevención Del Embarazo</strong> es el conjunto de medidas, 
+                                conocimientos y acciones que permiten evitar embarazos en mujeres, 
+                                especialmente durante la adolescencia. No se trata solamente de métodos 
+                                anticonceptivos, sino de una <strong>Educación Sexual Integral</strong> que 
+                                incluya:
+                            </p>
+                            
+                            <!-- Lista de aspectos importantes -->
+                            <ul class="lista-aspectos">
+                                <li class="aspecto-item">
+                                    <span>- Conocimiento del propio cuerpo y desarrollo -</span>
+                                </li>
+                                <li class="aspecto-item">
+                                    <span>- Información sobre salud reproductiva -</span>
+                                </li>
+                                <li class="aspecto-item">
+                                    <span>- Habilidades para la toma de decisiones responsables -</span>
+                                </li>
+                                <li class="aspecto-item">
+                                    <span>- Comunicación asertiva en las relaciones -</span>
+                                </li>
+                                <li class="aspecto-item">
+                                    <span>- Acceso a servicios de salud confiables -</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Caja de importancia -->
+                        <div class="caja-importancia">
+                            <img class="icono-importancia" src="png/info/foco-info.png" >
+                            <div class="texto-importancia">
+                                <strong>Importancia Clave:</strong> La prevención permite a los adolescentes 
+                                continuar con sus proyectos educativos, reduce riesgos de salud y 
+                                contribuye a su bienestar fisico y psicológico.
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-- Columna derecha del contenido  -->
+                    <div class="columna-imagen">
+                        <div class="marco-imagen-contenido">
+                            <img src="Webp/Info/prevencion.webp"  class="imagen-conceptual">
+                        </div> 
+                        
+                        <!-- Estadística destacada -->
+                        <div class="tarjeta-estadistica">
+                            <div class="numero-estadistica">80%</div>
+                            <div class="texto-estadistica">
+                                De adolescentes que reciben educación sexual  
+                                retrasan su inicio sexual
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Contenido EDUCACIÓN SEXUAL -->
+            <div class="bloque-educacion">
+                <div class="encabezado-bloque">
+                    <h3 class="titulo-bloque">
+                        Educación Sexual Integral
+                    </h3>
+                    <p class="subtitulo-bloque">
+                        Más que información biológica, es formación para la vida.
+                    </p>
+                </div>
+                
+                <!-- Contenedor de tarjetas -->
+                <div class="contenedor-tarjetas">
+                    
+                    <!-- Tarjeta 1: Qué es -->
+                    <div class="tarjeta-educacion tarjeta-que-es">
+                        <div class="cabecera-tarjeta">
+                            <div >
+                                <img class="icono-tarjeta" src="svg/icons-guardado.svg">
+                            </div>
+                            <h4 class="titulo-tarjeta">¿Qué es?</h4>
+                        </div>
+                        <div class="contenido-tarjeta">
+                            <p class="texto-tarjeta">
+                                La Educación Sexual Integral es un proceso educativo continuo que aborda la sexualidad de forma integral, más allá de lo biológico.
+                                Brinda información científica, promueve relaciones saludables, el respeto a la diversidad y la previene de riesgos.
+                            </p>
+                                <img class="imagen-tarjeta" src="Webp/Info/educacion-que-es.webp" >
+                        </div>
+                        <div class="pie-tarjeta">
+                            <span class="etiqueta-tarjeta">Concepto Fundamental</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta 2: Para qué sirve -->
+                    <div class="tarjeta-educacion tarjeta-para-que">
+                        <div class="cabecera-tarjeta">
+                            <div >
+                                <img class="icono-tarjeta" src="svg/icons-guardado.svg">
+                            </div>
+                            <h4 class="titulo-tarjeta">¿Para qué sirve?</h4>
+                        </div>
+                        <div class="contenido-tarjeta">
+                                <ul class="list-edu">
+                                    <li>Prevenir embarazos no planificados y no deseados</li>
+                                    <li>Reducir la incidencia de infecciones de transmisión sexual</li>
+                                    <li>Crear relaciones sanas promovidas por el respeto e igualdad</li>
+                                    <li>Proteger contra el abuso sexual mediante el conocimiento de derechos y límites</li>
+                                </ul>
+                                <img class="imagen2" src="Webp/Info/educacion-para-que.webp">
+                        </div>
+                        <div class="pie-tarjeta">
+                            <span class="etiqueta-tarjeta">Objetivos</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta 3: Importancia -->
+                    <div class="tarjeta-educacion tarjeta-importancia">
+                        <div class="cabecera-tarjeta">
+                            <div >
+                                <img class="icono-tarjeta" src="svg/icons-guardado.svg">
+                            </div>
+                            <h4 class="titulo-tarjeta">Su Importancia</h4>
+                        </div>
+                        <div class="contenido-tarjeta">
+                            <p class="texto-tarjeta">
+                                Es fundamental para el desarrollo saludable de adolescentes. 
+                                Reduce en un <strong>50%</strong> los embarazos no deseados y 
+                                previene abusos sexuales al enseñar sobre consentimiento 
+                                y límites personales.
+                            </p>
+                                <img class="imagen3" src="Webp/Info/educacion-importancia.webp" >
+                        </div>
+                        <div class="pie-tarjeta">
+                            <span class="etiqueta-tarjeta">Impacto</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tarjeta 4: Componentes -->
+                    <div class="tarjeta-educacion tarjeta-componentes">
+                        <div class="cabecera-tarjeta">
+                            <div >
+                                <img class="icono-tarjeta" src="svg/icons-guardado.svg">
+                            </div>
+                            <h4 class="titulo-tarjeta">Palabras Claves</h4>
+                        </div>
+                        <div class="contenido-tarjeta">
+                            <div class="componentes-grid">
+                                <span class="componente-item">Anatomía</span>
+                                <span class="componente-item">Pubertad</span>
+                                <span class="componente-item">Reproducción</span>
+                                <span class="componente-item">Anticonceptivos</span>
+                                <span class="componente-item">Relaciones</span>
+                                <span class="componente-item">Consentimiento</span>
+                                <span class="componente-item">Diversidad</span>
+                                <span class="componente-item">Derechos</span>
+                            </div>
+                            <!-- IMAGEN RECOMENDADA 5 -->
+                                <img class="imagen4" src="Webp/Info/educacion-componentes.webp">
+                        </div>
+                        <div class="pie-tarjeta">
+                            <span class="etiqueta-tarjeta">Contenido</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contenido IMPACTO PSICOLÓGICO Y FÍSICO -->
+            <div class="bloque-impacto">
+                <div class="encabezado-bloque">
+                    <h3 class="titulo-bloque">
+                        <i class="icono-bloque"></i>
+                        Impacto de la Educación Sexual
+                    </h3>
+                    <p class="subtitulo-bloque">
+                        Consecuencias positivas en el desarrollo integral
+                    </p>
+                </div>
+                
+                <!-- Contenedor de impacto en dos columnas -->
+                <div class="contenedor-impacto">
+                    
+                    <!-- Columna izquierda De Impacto psicológico -->
+                    <div class="columna-impacto impacto-psicologico">
+                        <div class="cabecera-impacto">
+                            <div >
+                                <img class="icono-tarjeta1" src="svg/campana.svg">
+                            </div>
+                            <h4 class="titulo-impacto">Impacto Psicológico</h4>
+                        </div>
+                        
+                        <!-- Lista de impactos psicológicos -->
+                        <div class="lista-impactos">
+                            <div class="item-impacto">
+                                <div class="numero-item">01</div>
+                                <div class="contenido-item">
+                                    <h5>Autoestima fortalecida</h5>
+                                    <p>Mayor aceptación del propio cuerpo y confianza en sí mismo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item-impacto">
+                                <div class="numero-item">02</div>
+                                <div class="contenido-item">
+                                    <h5>Reducción de ansiedad</h5>
+                                    <p>Menos preocupaciones y miedos sobre la sexualidad</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item-impacto">
+                                <div class="numero-item">03</div>
+                                <div class="contenido-item">
+                                    <h5>Mejor comunicación</h5>
+                                    <p>Habilidad para expresar necesidades y establecer límites</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item-impacto">
+                                <div class="numero-item">04</div>
+                                <div class="contenido-item">
+                                    <h5>Desarrollo emocional</h5>
+                                    <p>Manejo adecuado de emociones en las relaciones</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="imagen-impacto">
+                            <img src="Webp/Info/impacto-psicologico.webp">
+                            <div class="leyenda-impacto">
+                                Bienestar mental y emocional
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Columna derecha De Impacto físico -->
+                    <div class="columna-impacto impacto-fisico">
+                        <div class="cabecera-impacto">
+                            <div >
+                                <img class="icono-tarjeta1" src="svg/campana.svg">
+                            </div>
+                            <h4 class="titulo-impacto">Impacto Físico</h4>
+                        </div>
+                        
+                        <!-- Lista de impactos físicos -->
+                        <div class="lista-impactos">
+                            <div class="item-impacto">
+                                <div class="numero-item">01</div>
+                                <div class="contenido-item">
+                                    <h5>Salud reproductiva</h5>
+                                    <p>Conocimiento y cuidado del propio sistema reproductivo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item-impacto">
+                                <div class="numero-item">02</div>
+                                <div class="contenido-item">
+                                    <h5>Prevención de ETS</h5>
+                                    <p>Reducción del 60% en infecciones de transmisión sexual</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item-impacto">
+                                <div class="numero-item">03</div>
+                                <div class="contenido-item">
+                                    <h5>Embarazos saludables</h5>
+                                    <p>Cuando sean planificados, menor riesgo de complicaciones</p>
+                                </div>
+                            </div>
+                            
+                            <div class="item-impacto">
+                                <div class="numero-item">04</div>
+                                <div class="contenido-item">
+                                    <h5>Bienestar general</h5>
+                                    <p>Mejor calidad de vida y atención a la salud integral</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="imagen-impacto">
+                            <img src="Webp/Info/impacto-fisico.webp">
+                            <div class="leyenda-impacto">
+                                Protección y cuidado del cuerpo
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Nota importante -->
+                <div class="nota-importante">
+                    <div class="icono-nota">
+                            <div >
+                                <img class="icono-tarjeta1" src="svg/nota.svg">
+                            </div>
+                    </div>
+                    <div class="texto-nota">
+                        <strong>Equilibrio necesario:</strong> La educación sexual debe abordar tanto 
+                        aspectos psicológicos como físicos para un desarrollo integral. Ambos 
+                        impactos son igualmente importantes y se complementan.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- SECCION CONTENIDO: MÉTODOS PREVENTIVOS -->
+<section id="seccion-metodos" class="seccion-metodos">
+    <div class="contenedor-general">
+        
+        <!-- Encabezado de la sección -->
+        <div class="encabezado-seccion">
+            <h2 class="titulo-seccion">
+                Métodos Preventivos
+            </h2>
+            <p class="descripcion-seccion">
+                Conoce los métodos anticonceptivos más efectivos y seguros.
+            </p>
+        </div>
+        
+        <!-- Contenido ¿QUÉ SON LOS MÉTODOS ANTICONCEPTIVOS? -->
+        <div class="bloque-concepto">
+            <div class="contenedor-concepto">
+                
+                <!-- Columna izquierda: Concepto -->
+                <div class="columna-concepto">
+                    <h3 class="subtitulo-contenido">
+                        ¿Qué son los métodos anticonceptivos?
+                    </h3>
+                    
+                    <div class="concepto-principal2">
+                        <p class="texto-concepto2">
+                            Los <strong>Métodos Anticonceptivos</strong> son técnicas, dispositivos 
+                            o medicamentos que ayuda a prevenir el embarazo.
+                            Su objetivo principal es permitir que las personas tengan 
+                            relaciones sexuales sin riesgo de concepción, brindando 
+                            control sobre su salud reproductiva.
+                        </p>
+                        
+                        <!-- Características importantes -->
+                        <div class="caracteristicas-grid">
+                            <div class="caracteristica">
+                            <div>
+                                <img class="icono-tarjeta2" src="svg/escudo.svg">
+                            </div>
+                                <div class="texto-caracteristica">
+                                    <h4>Una Seguridad Médica</h4>
+                                    <p>Aprobados y supervisados por profesionales</p>
+                                </div>
+                            </div>
+                            
+                            <div class="caracteristica">
+                            <div >
+                                <img class="icono-tarjeta2" src="svg/escudo.svg">
+                            </div>
+                                <div class="texto-caracteristica">
+                                    <h4>Variedad De Opciones</h4>
+                                    <p>Diferentes métodos para diferentes necesidades</p>
+                                </div>
+                            </div>
+                            
+                            <div class="caracteristica">
+                            <div >
+                                <img class="icono-tarjeta2" src="svg/escudo.svg">
+                            </div>
+                                <div class="texto-caracteristica">
+                                    <h4>Alta Efectividad</h4>
+                                    <p>Hasta 99% de protección con uso correcto</p>
+                                </div>
+                            </div>
+                            
+                            <div class="caracteristica">
+                            <div >
+                                <img class="icono-tarjeta2" src="svg/escudo.svg">
+                            </div>
+                                <div class="texto-caracteristica">
+                                    <h4>La Reversibilidad</h4>
+                                    <p>La mayoría permiten planificación familiar futura</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                        <div class="cuadro-info-adicional">
+                            <div class="encabezado-cuadro">
+                                <img class="icono-info" src="png/info/foco-info.png">
+                                <h3>Mas Alla de los Métodos Anticonceptivos</h3>
+                            </div>
+                            <div class="contenido-cuadro">
+                                <p><strong>¿Por qué es importante conocerlos?</strong></p>
+                                <p>La educación sobre métodos anticonceptivos permite tomar decisiones responsables, promover el autocuidado y fortalecer la salud sexual y reproductiva desde la información confiable.
+                                    Nosotros buscamos por este medio:
+                                </p>
+                                <ul class="lista-metodos">
+                                    <li>Fomentar decisiones informadas</li>
+                                    <li>Promover la responsabilidad persona</li>
+                                    <li>Reforzar el cuidado de la salud</li>
+                                    <li>Brindar información educativa y preventiva</li>
+                                </ul>
+                                <div class="nota-proyecto">
+                                    <p>Por tu Bienestar y Salud</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenido TIPOS MÁS CONOCIDOS -->
+        <div class="bloque-tipos">
+            <div class="encabezado-bloque">
+                <h3 class="titulo-bloque">
+                    Tipos más conocidos
+                </h3>
+                <p class="subtitulo-bloque">
+                    Conoce las mejores opciones disponibles y sus características principales
+                </p>
+            </div>
+            
+            <!-- Contenedor de tarjetas de métodos en horizontal -->
+            <div class="contenedor-metodos-horizontal">
+                
+                <!-- Método 1: Anticonceptivos Hormonales -->
+                <div class="tarjeta-metodo">
+                    <div class="cabecera-tarjeta-metodo">
+                        <div class="icono-metodo">
+                            <div>
+                                <img class="icon-tarjeta" src="svg/metodo.svg">
+                            </div>
+                        </div>
+                        <h4 class="nombre-metodo">Anticonceptivos Hormonales</h4>
+                        <span class="categoria-metodo">Femenino</span>
+                    </div>
+                    
+                    <div class="contenido-tarjeta-metodo">
+                        <p class="descripcion-metodo">
+                            <strong>¿Qué Son?</strong> Medicamentos que contienen hormonas 
+                            sintéticas similares a las femeninas (estrógeno y progestina).
+                        </p>
+                        
+                        <p class="funcion-metodo">
+                            <strong>¿Cómo Funcionan?</strong> Previenen la ovulación, 
+                            espesan el moco cervical y adelgazan el endometrio.
+                        </p>
+                        
+                        <div class="detalles-metodo">
+                            <div class="detalle">
+                                <span class="etiqueta-detalle">Efectividad:</span>
+                                <span class="valor-detalle">99%</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta-detalle">Duración:</span>
+                                <span class="valor-detalle">Diaria</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta-detalle">Receta:</span>
+                                <span class="valor-detalle">Sí</span>
+                            </div>
+                        </div>
+                        
+                        <div class="imagen-metodo-tarjeta">
+                            <img src="Webp/Info/metodo-hormonales.webp" >
+                            <div class="leyenda-imagen">Pastillas Anticonceptivas</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pie-tarjeta-metodo">
+                        <div class="indicador-tiempo">
+                            <span>Uso diario</span>
+                        </div>
+                        <div class="indicador-proteccion">
+                            <span>Alta protección</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Método 2: DIU -->
+                <div class="tarjeta-metodo">
+                    <div class="cabecera-tarjeta-metodo">
+                        <div class="icono-metodo">
+                            <div>
+                                <img class="icon-tarjeta" src="svg/metodo.svg">
+                            </div>
+                        </div>
+                        <h4 class="nombre-metodo">DIU (Dispositivo Intrauterino)</h4>
+                        <span class="categoria-metodo">Femenino</span>
+                    </div>
+                    
+                    <div class="contenido-tarjeta-metodo">
+                        <p class="descripcion-metodo">
+                            <strong>¿Qué Es?</strong> Dispositivo pequeño en forma de "T" 
+                            que se coloca dentro del útero.
+                        </p>
+                        
+                        <p class="funcion-metodo">
+                            <strong>¿Cómo Funciona?</strong> Impide que los espermatozoides 
+                            lleguen al óvulo y altera el endometrio.
+                        </p>
+                        
+                        <div class="detalles-metodo">
+                            <div class="detalle">
+                                <span class="etiqueta-detalle">Efectividad:</span>
+                                <span class="valor-detalle">99.8%</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta-detalle">Duración:</span>
+                                <span class="valor-detalle">10-12 años</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta-detalle">Receta:</span>
+                                <span class="valor-detalle">Sí</span>
+                            </div>
+                        </div>
+
+                        <div class="imagen-metodo-tarjeta">
+                            <img src="Webp/Info/metodo-diu.webp" >
+                            <div class="leyenda-imagen">DIU hormonal o de cobre</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pie-tarjeta-metodo">
+                        <div class="indicador-tiempo">
+                            <span>Largo plazo</span>
+                        </div>
+                        <div class="indicador-proteccion">
+                            <span>Máxima protección</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Método 3: Preservativos -->
+                <div class="tarjeta-metodo">
+                    <div class="cabecera-tarjeta-metodo">
+                        <div class="icono-metodo">
+                            <div>
+                                <img class="icon-tarjeta" src="svg/metodo.svg">
+                            </div>
+                        </div>
+                        <h4 class="nombre-metodo">Preservativos (Condónes)</h4>
+                        <span class="categoria-metodo">Masculino/Femenino</span>
+                    </div>
+                    
+                    <div class="contenido-tarjeta-metodo">
+                        <p class="descripcion-metodo">
+                            <strong>¿Qué Son?</strong> Fundas de látex o poliuretano 
+                            que cubren el pene o se colocan en la vagina.
+                        </p>
+                        
+                        <p class="funcion-metodo">
+                            <strong>¿Cómo Funcionan?</strong> Crean una barrera física 
+                            que impide el paso de espermatozoides.
+                        </p>
+                        
+                        <div class="detalles-metodo">
+                            <div class="detalle">
+                                <span class="etiqueta-detalle">Efectividad:</span>
+                                <span class="valor-detalle">98%</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta-detalle">Duración:</span>
+                                <span class="valor-detalle">Un solo uso</span>
+                            </div>
+                            <div class="detalle">
+                                <span class="etiqueta-detalle">Receta:</span>
+                                <span class="valor-detalle">No</span>
+                            </div>
+                        </div>
+                        
+                        <div class="imagen-metodo-tarjeta">
+                            <img src="Webp/Info/metodo-preservativos.webp">
+                            <div class="leyenda-imagen">Preservativos</div>
+                        </div>
+                    </div>
+                    
+                    <div class="pie-tarjeta-metodo">
+                        <div class="indicador-tiempo">
+                            <span>Uso único</span>
+                        </div>
+                        <div class="indicador-proteccion">
+                            <span>+ Protección ETS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Nota sobre consulta profesional -->
+            <div class="nota-profesional">
+                <div class="icono-nota">
+                    <img class="icono-importancia" src="png/info/foco-info.png" >
+                </div>
+                <div class="contenido-nota">
+                    <h5>Consulta siempre a un profesional</h5>
+                    <p>La elección del método anticonceptivo debe ser supervisada por 
+                    un médico especialista según tu salud, edad y necesidades específicas. Consulta Siempre.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenido IMPORTANCIA DEL USO RESPONSABLE -->
+        <div class="bloque-responsable" >
+            <div class="encabezado-bloque">
+                <h3 class="titulo-bloque">
+
+                    Importancia del uso responsable
+                </h3>
+                <p class="subtitulo-bloque">
+                    La efectividad depende del correcto uso y compromiso
+                </p>
+            </div>
+            
+            <div class="contenedor-responsable">
+                <!-- Lado izquierdo -->
+                <div class="columna-responsable">
+                    <div class="concepto-responsable">
+                        <h4 class="titulo-responsable">¿Por qué es crucial el uso responsable?</h4>
+                        <p class="texto-responsable">
+                            El <strong>Uso Responsable</strong> de métodos anticonceptivos 
+                            no solo garantiza su efectividad máxima, sino que también 
+                            promueve una salud reproductiva óptima y relaciones sexuales 
+                            seguras y consensuadas.
+                        </p>
+                        
+                        <div class="elementos-responsabilidad">
+                            <div class="elemento-resp">
+                                <div class="numero-elemento">1</div>
+                                <div class="texto-elemento">
+                                    <h5>Su Correcta Aplicación</h5>
+                                    <p>Seguir las instrucciones al pie de la letra</p>
+                                </div>
+                            </div>
+                            
+                            <div class="elemento-resp">
+                                <div class="numero-elemento">2</div>
+                                <div class="texto-elemento">
+                                    <h5>Consistencia En El Uso</h5>
+                                    <p>Mantener el método según las indicaciones</p>
+                                </div>
+                            </div>
+                            
+                            <div class="elemento-resp">
+                                <div class="numero-elemento">3</div>
+                                <div class="texto-elemento">
+                                    <h5>Comunicación De Pareja</h5>
+                                    <p>Decisión conjunta y apoyo mutuo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="elemento-resp">
+                                <div class="numero-elemento">4</div>
+                                <div class="texto-elemento">
+                                    <h5>Un Seguimiento Médico</h5>
+                                    <p>Revisiones periódicas y ajustes necesarios</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lado derecho -->
+                <div class="columna-infografia">
+                    <div class="infografia-responsable">
+                        <img src="png/info/responsabilidad-uso.png" class="imagen-infografia">
+                        <div class="consejos-infografia">
+                            <div class="consejo">
+                                <span>Verificar fechas de caducidad</span>
+                            </div>
+                            <div class="consejo">
+                                <span>Almacenar correctamente</span>
+                            </div>
+                            <div class="consejo">
+                                <span>No compartir medicamentos</span>
+                            </div>
+                            <div class="consejo">
+                                <span>Reportar efectos secundarios</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- CONTENIDO EFECTIVIDAD COMPARATIVA -->
+        <div class="bloque-efectividad">
+            <div class="encabezado-bloque">
+                <h3 class="titulo-bloque">
+                    Efectividad comparativa
+                </h3>
+                <p class="subtitulo-bloque">
+                    Beneficios porcentuales del uso correcto de métodos anticonceptivos
+                </p>
+            </div>
+            
+            <!-- Contenedor de dos tarjetas comparativas -->
+            <div class="contenedor-comparativo">
+                
+                <!-- Tarjeta 1: Beneficios para la mujer -->
+                <div class="tarjeta-comparativa tarjeta-mujer">
+                    <div class="cabecera-comparativa">
+                            <img class="icono-import" src="svg/corazon.svg">
+                        <h4 class="titulo-comparativa">Beneficios para la Mujer</h4>
+                    </div>
+                    
+                    <div class="contenido-comparativa">
+                        <!-- Gráfico circular -->
+                        <div class="grafico-efectividad">
+                            <div class="circulo-grafico" style="--porcentaje: 95;">
+                                <span class="porcentaje-grafico">95%</span>
+                            </div>
+                            <div class="leyenda-grafico">
+                                <p>Reducción de embarazos no planificados</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Lista de beneficios -->
+                        <div class="lista-beneficios">
+                            <div class="beneficio">
+                                <span class="porcentaje-beneficio">99%</span>
+                                <div class="texto-beneficio">
+                                    <h5>Control reproductivo</h5>
+                                    <p>Decidir el tiempo adecuado a tener hijos</p>
+                                </div>
+                            </div>
+                            
+                            <div class="beneficio">
+                                <span class="porcentaje-beneficio">85%</span>
+                                <div class="texto-beneficio">
+                                    <h5>Continuidad educativa</h5>
+                                    <p>Completar estudios e ir aun mas lejos sin interrupciones</p>
+                                </div>
+                            </div>
+                            
+                            <div class="beneficio">
+                                <span class="porcentaje-beneficio">70%</span>
+                                <div class="texto-beneficio">
+                                    <h5>Desarrollo profesional</h5>
+                                    <p>Oportunidades laborales sin limitaciones</p>
+                                </div>
+                            </div>
+                            
+                            <div class="beneficio">
+                                <span class="porcentaje-beneficio">90%</span>
+                                <div class="texto-beneficio">
+                                    <h5>Salud física</h5>
+                                    <p>Reducion de riesgos con complicaciones médicas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pie-comparativa">
+                        <div class="resumen-impacto">
+                            <span>Autonomía y Bienestar Integral</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta 2: Beneficios para el hombre -->
+                <div class="tarjeta-comparativa tarjeta-hombre">
+                    <div class="cabecera-comparativa">
+                            <img class="icono-import" src="svg/corazon.svg">
+                        <h4 class="titulo-comparativa">Beneficios para el Hombre</h4>
+                    </div>
+                    
+                    <div class="contenido-comparativa">
+                        <!-- Gráfico circular -->
+                        <div class="grafico-efectividad">
+                            <div class="circulo-grafico" style="--porcentaje: 85;">
+                                <span class="porcentaje-grafico">85%</span>
+                            </div>
+                            <div class="leyenda-grafico">
+                                <p>Participación activa en la prevención</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Lista de beneficios -->
+                        <div class="lista-beneficios">
+                            <div class="beneficio">
+                                <span class="porcentaje-beneficio">95%</span>
+                                <div class="texto-beneficio">
+                                    <h5>Responsabilidad compartida</h5>
+                                    <p>Equidad en la planificación familiar</p>
+                                </div>
+                            </div>
+                            
+                            <div class="beneficio">
+                                <span class="porcentaje-beneficio">80%</span>
+                                <div class="texto-beneficio">
+                                    <h5>Relaciones más sanas</h5>
+                                    <p>Comunicación y confianza fortalecidas</p>
+                                </div>
+                            </div>
+                            
+                            <div class="beneficio">
+                                <span class="porcentaje-beneficio">75%</span>
+                                <div class="texto-beneficio">
+                                    <h5>Estabilidad económica</h5>
+                                    <p>Mejor preparación para paternidad</p>
+                                </div>
+                            </div>
+                            
+                            <div class="beneficio">
+                                <span class="porcentaje-beneficio">100%</span>
+                                <div class="texto-beneficio">
+                                    <h5>Prevención de ETS</h5>
+                                    <p>Protección mutua en relaciones sexuales</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pie-comparativa">
+                        <div class="resumen-impacto">
+                            <span>Corresponsabilidad y protección</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conclusión final -->
+            <div class="conclusion-efectividad">
+                    <img class="icono-import" src="svg/coment.svg">
+                <div class="texto-conclusion">
+                    <h5>Conclusión: Beneficio mutuo</h5>
+                    <p>El uso de métodos anticonceptivos beneficia por igual a hombres 
+                    y mujeres, promoviendo relaciones equitativas, salud integral y 
+                    proyectos de vida compartidos con responsabilidad.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- SECCION CONTENIDO OBJETIVO VITAL -->
+<section id="seccion-objetivo-vital" class="seccion-contenido">
+        <div class="contenedor-seccion">
+            
+            <!-- Encabezado de la sección -->
+            <div class="encabezado-seccion">
+                <h2 class="titulo-seccion">Objetivo Vital</h2>
+                <p class="subtitulo-seccion">El conocimiento como herramienta de transformación personal</p>
+            </div>
+
+            <!-- Contenedor de las dos tarjetas -->
+            <div class="contenedor-tarjetas-vitales">
+                
+                <!-- TARJETA 1: VITALIDAD PARA LA MUJER -->
+                <div class="tarjeta-vital tarjeta-rosa glass-effect">
+                    <div class="encabezado-tarjeta-vital">
+                        <img class="icono-tarj-vital" src="svg/objetivo.svg" >
+                        <div class="titulo-tarjeta-vital">
+                            <h3>Vitalidad para la Mujer</h3>
+                            <p>La importancia de conocer sobre prevención del embarazo</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contenido-tarjeta-vital">
+                        <div class="puntos-vitales">
+                            <div class="punto-item">
+                                <span class="numero-punto">1</span>
+                                <div class="texto-punto">
+                                    <h4>Autonomía corporal</h4>
+                                    <p>Tomar decisiones informadas sobre tu propio cuerpo y salud reproductiva</p>
+                                </div>
+                            </div>
+                            
+                            <div class="punto-item">
+                                <span class="numero-punto">2</span>
+                                <div class="texto-punto">
+                                    <h4>Proyecto de vida claro</h4>
+                                    <p>Planificar tu futuro sin interrupciones no deseadas en tu desarrollo personal</p>
+                                </div>
+                            </div>
+                            
+                            <div class="punto-item">
+                                <span class="numero-punto">3</span>
+                                <div class="texto-punto">
+                                    <h4>Salud integral protegida</h4>
+                                    <p>Reducir riesgos de complicaciones médicas y cuidar tu bienestar completo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="punto-item">
+                                <span class="numero-punto">4</span>
+                                <div class="texto-punto">
+                                    <h4>Empoderamiento personal</h4>
+                                    <p>Desarrollar confianza y seguridad para navegar las relaciones con equidad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pie-tarjeta-vital">
+                        <span class="etiqueta-vital">Clave para el desarrollo femenino</span>
+                    </div>
+                </div>
+                
+                <div class="imagen-tarjeta-container">
+                    <div class="marco-imagen-vital rosa">
+                        <img src="Webp/info/mujer-empoderada.webp" class="imagen-vital">
+                        <div class="texto-imagen-vital">
+                            <p>El conocimiento lleva a la cima</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 2: IMPORTANCIA UNIVERSAL -->
+                <div class="tarjeta-vital tarjeta-azul glass-effect">
+                    <div class="encabezado-tarjeta-vital">
+                            <img class="icono-tarj-vital" src="svg/objetivo.svg" >
+                        <div class="titulo-tarjeta-vital">
+                            <h3>Importancia Universal</h3>
+                            <p>Educación sexual integral para hombres y mujeres</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contenido-tarjeta-vital">
+                        <div class="puntos-vitales">
+                            <div class="punto-item">
+                                <span class="numero-punto">1</span>
+                                <div class="texto-punto">
+                                    <h4>Equidad en la responsabilidad</h4>
+                                    <p>Promueve que la prevención sea una tarea compartida, no exclusiva de un género</p>
+                                </div>
+                            </div>
+                            
+                            <div class="punto-item">
+                                <span class="numero-punto">2</span>
+                                <div class="texto-punto">
+                                    <h4>Comunicación asertiva</h4>
+                                    <p>Fomenta diálogos abiertos y respetuosos sobre sexualidad y límites personales</p>
+                                </div>
+                            </div>
+                            
+                            <div class="punto-item">
+                                <span class="numero-punto">3</span>
+                                <div class="texto-punto">
+                                    <h4>Relaciones saludables</h4>
+                                    <p>Construye vínculos basados en el respeto mutuo, consentimiento y comprensión</p>
+                                </div>
+                            </div>
+                            
+                            <div class="punto-item">
+                                <span class="numero-punto">4</span>
+                                <div class="texto-punto">
+                                    <h4>Prevención integral</h4>
+                                    <p>Aborda simultáneamente embarazos no planificados y enfermedades de transmisión sexual</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pie-tarjeta-vital">
+                        <span class="etiqueta-vital">Fundamental para la sociedad</span>
+                    </div>
+                </div>
+                
+                <div class="imagen-tarjeta-container">
+                    <div class="marco-imagen-vital azul">
+                        <img src="png/info/equidad-responsabilidad.png" alt="Equidad y responsabilidad compartida" class="imagen-vital">
+                        <div class="texto-imagen-vital">
+                            <p> Equidad y responsabilidad compartida</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MENSAJE FINAL -->
+        <div class="mensaje-conclusion">
+            <img class="icono-tarjfinal" src="png/info/conocimiento-libro.png" >
+            <div class="contenido">
+                    <h3 class="titulo-conclusion">Informacion que Construye Futuros</h3>
+                <p class="texto-conclusion">
+                    El conocimiento sobre Prevención y Educación Sexual es el cimiento para 
+                    una sociedad más saludable y consciente de sus decisiones reproductivas.
+                </p>
+            </div>
+        </div>
+</div>
+</section>
+
+
+    <script>
+        // NAVEGACION SUAVE ENTRE SECCIONES
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navegación suave para los botones
+            const botones = document.querySelectorAll('.boton-navegacion');
+            botones.forEach(boton => {
+                boton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const destino = document.querySelector(this.getAttribute('href'));
+                    if (destino) {
+                        destino.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+
+        <script> 
+            // CARRUSEL AUTOMÁTICO DE DATOS EDUCATIVOS
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Elementos del Panel de Datos
+                const datosItems = document.querySelectorAll('.dato-item');
+                const indicadores = document.querySelectorAll('.indicador');
+                const btnAnterior = document.querySelector('.btn-anterior');
+                const btnSiguiente = document.querySelector('.btn-siguiente');
+                
+                // Variables de control
+                let indiceActual = 0;
+                let intervalo;
+                const TIEMPO_CAMBIO = 4000; // 10 segundos entre cambios
+                
+                // Función para cambiar al dato específico
+                function cambiarDato(nuevoIndice) {
+                    // Remover clase activa de todos los datos
+                    datosItems.forEach(item => item.classList.remove('activo'));
+                    // Remover clase activa de todos los indicadores
+                    indicadores.forEach(ind => ind.classList.remove('activo'));
+                    
+                    // Actualizar índice actual
+                    indiceActual = nuevoIndice;
+                    
+                    // Si el índice es mayor que el total, volver al inicio
+                    if (indiceActual >= datosItems.length) {
+                        indiceActual = 0;
+                    }
+
+                    // Si el índice es menor que 0, ir al último
+                    if (indiceActual < 0) {
+                        indiceActual = datosItems.length - 1;
+                    }
+                    
+                    // Agregar clase activa al dato e indicador correspondientes
+                    datosItems[indiceActual].classList.add('activo');
+                    indicadores[indiceActual].classList.add('activo');
+                }
+                
+                // Función para avanzar al siguiente dato
+                function siguienteDato() {
+                    cambiarDato(indiceActual + 1);
+                }
+                
+                // Función para retroceder al dato anterior
+                function anteriorDato() {
+                    cambiarDato(indiceActual - 1);
+                }
+                
+                // Iniciar carrusel automático
+                function iniciarCarrusel() {
+                    intervalo = setInterval(siguienteDato, TIEMPO_CAMBIO);
+                }
+                
+                // Pausar carrusel automático 
+                function pausarCarrusel() {
+                    clearInterval(intervalo);
+                    // Reiniciar después de 10 segundos de inactividad
+                    setTimeout(iniciarCarrusel, 10000);
+                }
+
+                // Botón siguiente
+                btnSiguiente.addEventListener('click', function() {
+                    siguienteDato();
+                    pausarCarrusel();
+                });
+                
+                // Botón anterior
+                btnAnterior.addEventListener('click', function() {
+                    anteriorDato();
+                    pausarCarrusel();
+                });
+                
+                // Indicadores (puntos de navegación)
+                indicadores.forEach((indicador, index) => {
+                    indicador.addEventListener('click', function() {
+                        cambiarDato(index);
+                        pausarCarrusel();
+                    });
+                });
+                
+                // Pausar cuando el mouse está sobre el carrusel
+                document.querySelector('.carrusel-datos').addEventListener('mouseenter', pausarCarrusel);
+                
+                // Iniciar el carrusel automático
+                iniciarCarrusel();
+                
+                // Cambio automático cada 4 segundos ya está configurado en iniciarCarrusel()
+                
+                // Log para verificar que funciona
+                console.log('Carrusel educativo iniciado con', datosItems.length, 'datos');
+            });
+        </script>
+
+
+    <!-- Se designa el Pie de Pagina-->
+    <footer class="footer">
+        <p>© 2025-2026 PRAEVENBYTE · Prevención y Educación para decisiones responsables - Proyecto Educativo</p>
+    </footer>
+
+    
+</body>
+
+</html>
